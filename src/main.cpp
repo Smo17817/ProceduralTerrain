@@ -1,90 +1,122 @@
-#include <glad/glad.h>  // ATTENZIONE: glad deve sempre essere incluso PRIMA di glfw
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+// Librerie matematiche GLM
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include <iostream>
 #include "Terrain.h"
+#include "Shader.h" // La nostra nuova classe!
 
-// Funzione per ridimensionare la viewport se l'utente rimpicciolisce/ingrandisce la finestra
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
 }
 
-// Funzione per gestire l'input da tastiera
 void processInput(GLFWwindow *window) {
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
 }
 
 int main() {
-    // 1. Inizializzazione di GLFW
+    // 1. Inizializzazione GLFW e Finestra
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    // 2. Creazione della finestra
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Generatore di Terreno Procedurale", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1000, 800, "Generatore di Terreno Procedurale", NULL, NULL);
     if (window == NULL) {
-        std::cout << "Errore nella creazione della finestra GLFW" << std::endl;
+        std::cout << "Errore creazione finestra" << std::endl;
         glfwTerminate();
         return -1;
     }
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // 3. Inizializzazione di GLAD (carica i puntatori alle funzioni di OpenGL)
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cout << "Errore nell'inizializzazione di GLAD" << std::endl;
+        std::cout << "Errore inizializzazione GLAD" << std::endl;
         return -1;
     }
 
-    // 4. Generiamo i dati del terreno
-    std::cout << "Generazione mesh in corso..." << std::endl;
-    Terrain myTerrain(100, 100, 1.5f);
-    std::cout << "Vertici: " << myTerrain.vertices.size() << " | Indici: " << myTerrain.indices.size() << std::endl;
+    // Abilitiamo il Depth Test (Z-Buffer) fondamentale per il 3D! 
+    // Evita che i triangoli lontani vengano disegnati sopra quelli vicini
+    glEnable(GL_DEPTH_TEST);
 
-    // 5. Configurazione dei Buffer OpenGL (VAO, VBO, EBO)
-    // 
+    // 2. Carichiamo gli Shader
+    // ATTENZIONE: Se esegui dalla cartella "build", i file shader si trovano nella cartella superiore
+    Shader terrainShader("../shaders/terrain.vert", "../shaders/terrain.frag");
+
+    // 3. Generiamo il Terreno e i Buffer
+    Terrain myTerrain(100, 100, 1.5f);
+    
     unsigned int VAO, VBO, EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
 
     glBindVertexArray(VAO);
-
-    // Carichiamo i Vertici nel VBO
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, myTerrain.vertices.size() * sizeof(float), myTerrain.vertices.data(), GL_STATIC_DRAW);
 
-    // Carichiamo gli Indici nell'EBO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, myTerrain.indices.size() * sizeof(unsigned int), myTerrain.indices.data(), GL_STATIC_DRAW);
 
-    // Spieghiamo a OpenGL come leggere i dati (3 float per ogni vertice: X, Y, Z)
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-    // Modalità Wireframe (disegna solo i contorni dei triangoli, perfetto per il debug del terreno)
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    // Modalità Wireframe (rimuovi il commento se vuoi vedere solo i contorni)
+    // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-    // 6. IL RENDER LOOP
+    // 4. RENDER LOOP
     while (!glfwWindowShouldClose(window)) {
-        // Input
         processInput(window);
 
-        // Rendering: Puliamo lo schermo con un colore di sfondo (blu scuro)
-        glClearColor(0.1f, 0.15f, 0.2f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        // Ora puliamo sia il buffer del colore che quello della profondità
+        glClearColor(0.5f, 0.8f, 0.9f, 1.0f); // Un bel colore azzurro cielo
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // --- QUI DISEGNEREMO IL TERRENO ---
-        // Per ora non lo disegniamo attivamente perché ci mancano gli Shader e la Telecamera!
-        // Se lo disegnassimo ora, OpenGL non saprebbe come trasformare le coordinate 3D nello schermo 2D.
+        // Attiviamo lo shader
+        terrainShader.use();
+
+        // -- MATEMATICA DELLA TELECAMERA (MVP) --
         
-        // Scambia i buffer e interroga gli eventi (mouse, tastiera)
+        // A. Projection Matrix (Prospettiva, FOV, Aspect Ratio)
+        glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1000.0f / 800.0f, 0.1f, 1000.0f);
+        
+        // B. View Matrix (Posizione e direzione della telecamera)
+        // Usiamo un po' di trigonometria per far ruotare la telecamera attorno al terreno col passare del tempo
+        float time = glfwGetTime();
+        float radius = 150.0f;
+        float camX = sin(time * 0.5f) * radius;
+        float camZ = cos(time * 0.5f) * radius;
+        
+        // Posizioniamo la telecamera in alto (Y=80) e la facciamo guardare verso il centro (0,0,0)
+        glm::mat4 view = glm::lookAt(glm::vec3(camX, 80.0f, camZ), 
+                                     glm::vec3(0.0f, 0.0f, 0.0f), 
+                                     glm::vec3(0.0f, 1.0f, 0.0f));
+
+        // C. Model Matrix (Posizione del modello nel mondo)
+        glm::mat4 model = glm::mat4(1.0f);
+        // Il terreno parte da X=0 e Z=0. Lo trasliamo per centrarlo nell'origine (0,0,0)
+        model = glm::translate(model, glm::vec3(-(myTerrain.width * myTerrain.scale) / 2.0f, 0.0f, -(myTerrain.depth * myTerrain.scale) / 2.0f));
+
+        // Inviamo le matrici allo shader
+        terrainShader.setMat4("projection", glm::value_ptr(projection));
+        terrainShader.setMat4("view", glm::value_ptr(view));
+        terrainShader.setMat4("model", glm::value_ptr(model));
+
+        // -- DISEGNO DEL TERRENO --
+        glBindVertexArray(VAO);
+        // Parametri: Tipo di primitiva, numero di indici, tipo di dati degli indici, offset
+        glDrawElements(GL_TRIANGLES, myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
+
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
-    // 7. Pulizia finale
+    // 5. Pulizia
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);
