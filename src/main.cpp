@@ -63,8 +63,13 @@ int main() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, myTerrain.indices.size() * sizeof(unsigned int), myTerrain.indices.data(), GL_STATIC_DRAW);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    // Attributo 0: Posizioni (X, Y, Z) - Ora lo "stride" è 6 float
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+
+    // Attributo 1: Normali (Nx, Ny, Nz) - Inizia dopo i primi 3 float
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
 
     // Modalità Wireframe (rimuovi il commento se vuoi vedere solo i contorni)
     // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -80,6 +85,13 @@ int main() {
         // Attiviamo lo shader
         terrainShader.use();
 
+        // Accendiamo il Sole!
+        glm::vec3 lightDirection = glm::vec3(-0.5f, -1.0f, -0.5f); // Luce che arriva dall'alto e da destra
+        glm::vec3 lightColor = glm::vec3(1.0f, 1.0f, 0.9f); // Luce solare leggermente calda
+        
+        glUniform3fv(glGetUniformLocation(terrainShader.ID, "lightDir"), 1, glm::value_ptr(lightDirection));
+        glUniform3fv(glGetUniformLocation(terrainShader.ID, "lightColor"), 1, glm::value_ptr(lightColor));
+
         // -- MATEMATICA DELLA TELECAMERA (MVP) --
         
         // A. Projection Matrix (Prospettiva, FOV, Aspect Ratio)
@@ -94,8 +106,8 @@ int main() {
         
         // Posizioniamo la telecamera in alto (Y=80) e la facciamo guardare verso il centro (0,0,0)
         glm::mat4 view = glm::lookAt(glm::vec3(camX, 80.0f, camZ), 
-                                     glm::vec3(0.0f, 0.0f, 0.0f), 
-                                     glm::vec3(0.0f, 1.0f, 0.0f));
+                                    glm::vec3(0.0f, 0.0f, 0.0f), 
+                                    glm::vec3(0.0f, 1.0f, 0.0f));
 
         // C. Model Matrix (Posizione del modello nel mondo)
         glm::mat4 model = glm::mat4(1.0f);
