@@ -17,8 +17,9 @@ set(SOURCES
     src/main.cpp
     src/Shader.cpp
     src/Terrain.cpp
-    src/PerlinNoiseGenator.h
-    include/glad/glad.c # Ricordati di scaricare glad.c dal sito web di GLAD!
+    src/Terrain.h  
+    src/PerlinNoiseGenerator.h   
+    include/glad/glad.c
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
