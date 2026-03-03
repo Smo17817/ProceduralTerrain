@@ -72,12 +72,12 @@ int main() {
     glEnableVertexAttribArray(1);
 
     // 4. Preparazione Piano dell'Acqua
-    float waterLevel = 4.0f; 
+    float waterLevel = 1.5f; 
     float waterSize = 500.0f; 
     float waterVertices[] = {
         -waterSize, waterLevel, -waterSize,  0.0f, 1.0f, 0.0f,
-         waterSize, waterLevel, -waterSize,  0.0f, 1.0f, 0.0f,
-         waterSize, waterLevel,  waterSize,  0.0f, 1.0f, 0.0f,
+        waterSize, waterLevel, -waterSize,  0.0f, 1.0f, 0.0f,
+        waterSize, waterLevel,  waterSize,  0.0f, 1.0f, 0.0f,
         -waterSize, waterLevel,  waterSize,  0.0f, 1.0f, 0.0f
     };
     unsigned int waterIndices[] = { 0, 1, 2, 2, 3, 0 };

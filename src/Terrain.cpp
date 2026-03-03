@@ -13,7 +13,7 @@ Terrain::Terrain(int w, int d, float s) : width(w), depth(d), scale(s) {
 void Terrain::generateMesh() {
     PerlinNoiseGenerator terrainNoise(12345); // Seed per il rumore
     float baseFrequency = 0.02f;
-    float amplitude = 15.0f;
+    float amplitude = 40.0f;
 
     // 1. Genera i vertici (X, Y, Z)
     for (int z = 0; z < depth; ++z) {
