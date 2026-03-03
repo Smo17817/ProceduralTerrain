@@ -13,23 +13,26 @@ void main() {
     
     // DEFINIZIONE DEI BIOMI
     if (Height < 2.0) {
-        // ABISSI: Più si scende (Height cala), più il colore diventa scuro
-        float depthFactor = clamp((Height + 5.0) / 7.0, 0.0, 1.0); // Calcola la profondità
-        vec3 deepBlue = vec3(0.01, 0.02, 0.1);  // Quasi nero
-        vec3 surfaceBlue = vec3(0.1, 0.3, 0.6); // Blu superficiale
-        color = mix(deepBlue, surfaceBlue, depthFactor);
+        // FONDALE
+        // Sabbia scura in profondità, sabbia chiara vicino alla superficie
+        float depthFactor = clamp((Height + 5.0) / 7.0, 0.0, 1.0);
+
+        vec3 deepSand = vec3(0.08, 0.07, 0.05);   // sabbia scura
+        vec3 shallowSand = vec3(0.35, 0.32, 0.25); // sabbia chiara
+
+        color = mix(deepSand, shallowSand, depthFactor);
     } 
     else if (Height < 4.0) {
-        color = vec3(0.8, 0.7, 0.5); // Sabbia/Spiaggia
+        color = vec3(0.82, 0.76, 0.62); // Spiaggia più naturale
     } 
     else if (Height < 15.0) {
-        color = vec3(0.3, 0.6, 0.3); // Erba
+        color = vec3(0.25, 0.55, 0.28); // Erba meno saturata
     } 
     else if (Height < 25.0) {
-        color = vec3(0.5, 0.5, 0.5); // Roccia
+        color = vec3(0.45, 0.45, 0.47); // Roccia più fredda
     } 
     else {
-        color = vec3(0.9, 0.9, 0.9); // Neve
+        color = vec3(0.95, 0.95, 0.98); // Neve leggermente fredda
     }
 
     // ILLUMINAZIONE

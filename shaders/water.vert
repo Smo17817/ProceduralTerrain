@@ -10,6 +10,7 @@ uniform float uTime;
 
 out vec3 FragPos;
 out vec3 Normal;
+out float WaveHeight;
 
 const float PI = 3.14159265;
 
@@ -52,14 +53,16 @@ void main()
     vec2 dir2 = normalize(vec2(-0.7, 0.3));
     vec2 dir3 = normalize(vec2(0.2, -1.0));
 
-    pos = gerstnerWave(pos, dir1, 0.5, 40.0, 1.5);
-    pos = gerstnerWave(pos, dir2, 0.3, 25.0, 2.0);
-    pos = gerstnerWave(pos, dir3, 0.2, 15.0, 2.5);
+    pos = gerstnerWave(pos, dir1, 0.15, 60.0, 1.2);
+    pos = gerstnerWave(pos, dir2, 0.10, 35.0, 1.6);
+    pos = gerstnerWave(pos, dir3, 0.05, 20.0, 2.0);
 
-    vec3 normal = computeNormal(aPos, dir1, 0.5, 40.0, 1.5);
-    normal += computeNormal(aPos, dir2, 0.3, 25.0, 2.0);
-    normal += computeNormal(aPos, dir3, 0.2, 15.0, 2.5);
+    vec3 normal = computeNormal(aPos, dir1, 0.15, 60.0, 1.2);
+    normal += computeNormal(aPos, dir2, 0.10, 35.0, 1.6);
+    normal += computeNormal(aPos, dir3, 0.05, 20.0, 2.0);
     normal = normalize(normal);
+
+    WaveHeight = pos.y;
 
     FragPos = vec3(model * vec4(pos, 1.0));
     Normal = mat3(transpose(inverse(model))) * normal;
