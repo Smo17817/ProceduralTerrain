@@ -19,7 +19,7 @@ set(SOURCES
     src/Terrain.cpp
     src/Terrain.h  
     src/PerlinNoiseGenerator.h   
-    include/glad/glad.c
+    include/glad/glad.h
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
