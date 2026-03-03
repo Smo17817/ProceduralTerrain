@@ -7,6 +7,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include <iostream>
+#include <cmath>
 #include "Terrain.h"
 #include "Shader.h" 
 
@@ -40,13 +41,16 @@ int main() {
         return -1;
     }
 
-    // Abilitiamo il Depth Test (Z-Buffer) fondamentale per il 3D! 
+    // Configurazione Stato OpenGL
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     // 2. Carichiamo gli Shader
     Shader terrainShader("../shaders/terrain.vert", "../shaders/terrain.frag");
+    Shader waterShader("../shaders/terrain.vert", "../shaders/water.frag");
 
-    // 3. Generiamo il Terreno e i Buffer
+    // 3. Generiamo il Terreno e i Buffer VAO/VBO/EBO
     Terrain myTerrain(100, 100, 1.5f);
     
     unsigned int VAO, VBO, EBO;
@@ -61,90 +65,91 @@ int main() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, myTerrain.indices.size() * sizeof(unsigned int), myTerrain.indices.data(), GL_STATIC_DRAW);
 
-    // Attributo 0: Posizioni (X, Y, Z) - Ora lo "stride" è 6 float
+    // Attributo 0: Posizioni | Attributo 1: Normali
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-
-    // Attributo 1: Normali (Nx, Ny, Nz) - Inizia dopo i primi 3 float
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
-    // 4. RENDER LOOP
+    // 4. Preparazione Piano dell'Acqua
+    float waterLevel = 4.0f; 
+    float waterSize = 500.0f; 
+    float waterVertices[] = {
+        -waterSize, waterLevel, -waterSize,  0.0f, 1.0f, 0.0f,
+         waterSize, waterLevel, -waterSize,  0.0f, 1.0f, 0.0f,
+         waterSize, waterLevel,  waterSize,  0.0f, 1.0f, 0.0f,
+        -waterSize, waterLevel,  waterSize,  0.0f, 1.0f, 0.0f
+    };
+    unsigned int waterIndices[] = { 0, 1, 2, 2, 3, 0 };
+
+    unsigned int waterVAO, waterVBO, waterEBO;
+    glGenVertexArrays(1, &waterVAO);
+    glGenBuffers(1, &waterVBO);
+    glGenBuffers(1, &waterEBO);
+
+    glBindVertexArray(waterVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, waterVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(waterVertices), waterVertices, GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, waterEBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(waterIndices), waterIndices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+
+    // 5. RENDER LOOP
     while (!glfwWindowShouldClose(window)) {
         processInput(window);
 
-        // --- CALCOLO DEL TEMPO E DEL SOLE ---
-        float time = glfwGetTime();
-        float sunSpeed = 0.3f; 
+        float time = (float)glfwGetTime();
         
-        float sunX = cos(time * sunSpeed);
-        float sunY = sin(time * sunSpeed);
-        float sunZ = -0.5f; 
-        
-        glm::vec3 lightDirection = glm::normalize(glm::vec3(sunX, sunY, sunZ));
+        // --- LUCE E CIELO FISSI ---
+        glm::vec3 lightDirection = glm::normalize(glm::vec3(-0.5f, -1.0f, -0.5f)); // Luce che viene dall'alto
+        glm::vec3 lightColor = glm::vec3(1.0f, 1.0f, 0.9f); // Luce bianca calda
+        glm::vec3 skyColor = glm::vec3(0.4f, 0.7f, 1.0f);   // Azzurro costante
 
-        // --- CALCOLO COLORI GIORNO/NOTTE ---
-        glm::vec3 skyColor;
-        glm::vec3 lightColor;
-
-        if (sunY > 0.2f) { 
-            // GIORNO PIENO
-            skyColor = glm::vec3(0.4f, 0.7f, 1.0f); 
-            lightColor = glm::vec3(1.0f, 1.0f, 0.9f); 
-        } 
-        else if (sunY > 0.0f) { 
-            // TRAMONTO / ALBA
-            float blend = sunY / 0.2f; 
-            skyColor = glm::mix(glm::vec3(0.8f, 0.4f, 0.2f), glm::vec3(0.4f, 0.7f, 1.0f), blend); 
-            lightColor = glm::mix(glm::vec3(1.0f, 0.5f, 0.2f), glm::vec3(1.0f, 1.0f, 0.9f), blend); 
-        } 
-        else { 
-            // NOTTE
-            skyColor = glm::vec3(0.05f, 0.05f, 0.1f); 
-            lightColor = glm::vec3(0.2f, 0.2f, 0.4f); 
-            lightDirection = glm::normalize(glm::vec3(sunX, 0.0f, sunZ));
-        }
-
-        // Applichiamo il colore del cielo al background
         glClearColor(skyColor.r, skyColor.g, skyColor.b, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // Attiviamo lo shader
-        terrainShader.use();
-
-        // --- ECCO LA CORREZIONE: USIAMO setVec3! ---
-        terrainShader.setVec3("lightDir", -lightDirection); 
-        terrainShader.setVec3("lightColor", lightColor);
-
-        // -- MATEMATICA DELLA TELECAMERA (MVP) --
+        // --- MATRICI TELECAMERA ---
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1000.0f / 800.0f, 0.1f, 1000.0f);
+        float camX = sin(time * 0.2f) * 150.0f;
+        float camZ = cos(time * 0.2f) * 150.0f;
+        glm::mat4 view = glm::lookAt(glm::vec3(camX, 80.0f, camZ), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         
-        float camRadius = 150.0f;
-        float camX = sin(time * 0.2f) * camRadius;
-        float camZ = cos(time * 0.2f) * camRadius;
-        glm::mat4 view = glm::lookAt(glm::vec3(camX, 80.0f, camZ), 
-                                    glm::vec3(0.0f, 0.0f, 0.0f), 
-                                    glm::vec3(0.0f, 1.0f, 0.0f));
-
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(-(myTerrain.width * myTerrain.scale) / 2.0f, 0.0f, -(myTerrain.depth * myTerrain.scale) / 2.0f));
 
+        // --- 1. DISEGNO TERRENO ---
+        terrainShader.use();
         terrainShader.setMat4("projection", glm::value_ptr(projection));
         terrainShader.setMat4("view", glm::value_ptr(view));
         terrainShader.setMat4("model", glm::value_ptr(model));
+        terrainShader.setVec3("lightDir", lightDirection);
+        terrainShader.setVec3("lightColor", lightColor);
 
-        // -- DISEGNO DEL TERRENO --
         glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, (GLsizei)myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
+
+        // --- 2. DISEGNO ACQUA ---
+        waterShader.use();
+        waterShader.setMat4("projection", glm::value_ptr(projection));
+        waterShader.setMat4("view", glm::value_ptr(view));
+        waterShader.setMat4("model", glm::value_ptr(model));
+        waterShader.setVec3("lightDir", lightDirection);
+        waterShader.setVec3("lightColor", lightColor);
+
+        glBindVertexArray(waterVAO);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
 
     // 5. Pulizia
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
+    glDeleteVertexArrays(1, &VAO); glDeleteBuffers(1, &VBO); glDeleteBuffers(1, &EBO);
+    glDeleteVertexArrays(1, &waterVAO); glDeleteBuffers(1, &waterVBO); glDeleteBuffers(1, &waterEBO);
     glfwTerminate();
     
     return 0;
