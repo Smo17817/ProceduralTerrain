@@ -3,26 +3,26 @@ project(ProceduralTerrain)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Includi le cartelle per gli header
+# 1. Includi le cartelle per gli header (.h)
 include_directories(include)
 
-# Trova OpenGL e i pacchetti di sistema necessari
+# 2. Diciamo a CMake dove trovare la cartella 'lib' con dentro libglfw3dll.a
+link_directories(${CMAKE_SOURCE_DIR}/lib)
+
+# Trova OpenGL di sistema
 find_package(OpenGL REQUIRED)
 
-# Assumiamo che tu abbia GLFW installato o compilato a parte
-# find_package(glfw3 REQUIRED) # (Scommenta se usi un package manager come vcpkg o pacman)
-
-# Aggiungi i file sorgente
+# Aggiungi i file sorgente (ATTENZIONE: glad.c ora è obbligatorio!)
 set(SOURCES
     src/main.cpp
     src/Shader.cpp
     src/Terrain.cpp
-    src/Terrain.h  
-    src/PerlinNoiseGenerator.h   
-    include/glad/glad.h
+    src/Terrain.h
+    src/PerlinNoiseGenerator.h
+    include/glad/glad.c 
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-# Linka le librerie
-target_link_libraries(${PROJECT_NAME} OpenGL::GL glfw)
+# 3. Linka le librerie usando "glfw3dll"
+target_link_libraries(${PROJECT_NAME} OpenGL::GL glfw3dll)

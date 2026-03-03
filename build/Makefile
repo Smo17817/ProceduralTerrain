@@ -128,6 +128,30 @@ ProceduralTerrain/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProceduralTerrain.dir\build.make CMakeFiles/ProceduralTerrain.dir/build
 .PHONY : ProceduralTerrain/fast
 
+include/glad/glad.obj: include/glad/glad.c.obj
+.PHONY : include/glad/glad.obj
+
+# target to build an object file
+include/glad/glad.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProceduralTerrain.dir\build.make CMakeFiles/ProceduralTerrain.dir/include/glad/glad.c.obj
+.PHONY : include/glad/glad.c.obj
+
+include/glad/glad.i: include/glad/glad.c.i
+.PHONY : include/glad/glad.i
+
+# target to preprocess a source file
+include/glad/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProceduralTerrain.dir\build.make CMakeFiles/ProceduralTerrain.dir/include/glad/glad.c.i
+.PHONY : include/glad/glad.c.i
+
+include/glad/glad.s: include/glad/glad.c.s
+.PHONY : include/glad/glad.s
+
+# target to generate assembly for a file
+include/glad/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ProceduralTerrain.dir\build.make CMakeFiles/ProceduralTerrain.dir/include/glad/glad.c.s
+.PHONY : include/glad/glad.c.s
+
 src/Shader.obj: src/Shader.cpp.obj
 .PHONY : src/Shader.obj
 
@@ -209,6 +233,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ProceduralTerrain
+	@echo ... include/glad/glad.obj
+	@echo ... include/glad/glad.i
+	@echo ... include/glad/glad.s
 	@echo ... src/Shader.obj
 	@echo ... src/Shader.i
 	@echo ... src/Shader.s
