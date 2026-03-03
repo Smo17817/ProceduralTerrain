@@ -25,4 +25,4 @@ set(SOURCES
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 # 3. Linka le librerie usando "glfw3dll"
-target_link_libraries(${PROJECT_NAME} OpenGL::GL glfw3dll)
+target_link_libraries(${PROJECT_NAME} OpenGL::GL glfw3)
