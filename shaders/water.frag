@@ -47,17 +47,15 @@ void main()
     vec3 finalColor = waterColor * (0.4 + diffuse) + specular;
     finalColor = mix(finalColor, vec3(1.0), fresnel * 0.6);
 
-    //
-    // 🌊 FOAM LOGIC
-    //
+    // FOAM LOGIC
 
-    // 1️⃣ Creste (normale meno verticale)
+    // Creste (normale meno verticale)
     float crestFactor = 1.0 - norm.y;
 
-    // 2️⃣ Altezza onda
+    // Altezza onda
     float heightFactorFoam = smoothstep(0.2, 0.6, WaveHeight - waterLevel);
 
-    // 3️⃣ Rumore animato
+    // Rumore animato
     float foamNoise = noise(FragPos.xz * 0.15 + uTime * 0.3);
 
     float foam = crestFactor * heightFactorFoam * foamNoise;
