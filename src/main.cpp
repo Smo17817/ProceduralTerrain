@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include "Terrain.h"
-#include "Shader.h" // La nostra nuova classe!
+#include "Shader.h" 
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
@@ -41,11 +41,9 @@ int main() {
     }
 
     // Abilitiamo il Depth Test (Z-Buffer) fondamentale per il 3D! 
-    // Evita che i triangoli lontani vengano disegnati sopra quelli vicini
     glEnable(GL_DEPTH_TEST);
 
     // 2. Carichiamo gli Shader
-    // ATTENZIONE: Se esegui dalla cartella "build", i file shader si trovano nella cartella superiore
     Shader terrainShader("../shaders/terrain.vert", "../shaders/terrain.frag");
 
     // 3. Generiamo il Terreno e i Buffer
@@ -71,57 +69,72 @@ int main() {
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
-    // Modalità Wireframe (rimuovi il commento se vuoi vedere solo i contorni)
-    // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
     // 4. RENDER LOOP
     while (!glfwWindowShouldClose(window)) {
         processInput(window);
 
-        // Ora puliamo sia il buffer del colore che quello della profondità
-        glClearColor(0.5f, 0.8f, 0.9f, 1.0f); // Un bel colore azzurro cielo
+        // --- CALCOLO DEL TEMPO E DEL SOLE ---
+        float time = glfwGetTime();
+        float sunSpeed = 0.5f; 
+        
+        float sunX = cos(time * sunSpeed);
+        float sunY = sin(time * sunSpeed);
+        float sunZ = -0.5f; 
+        
+        glm::vec3 lightDirection = glm::normalize(glm::vec3(sunX, sunY, sunZ));
+
+        // --- CALCOLO COLORI GIORNO/NOTTE ---
+        glm::vec3 skyColor;
+        glm::vec3 lightColor;
+
+        if (sunY > 0.2f) { 
+            // GIORNO PIENO
+            skyColor = glm::vec3(0.4f, 0.7f, 1.0f); 
+            lightColor = glm::vec3(1.0f, 1.0f, 0.9f); 
+        } 
+        else if (sunY > 0.0f) { 
+            // TRAMONTO / ALBA
+            float blend = sunY / 0.2f; 
+            skyColor = glm::mix(glm::vec3(0.8f, 0.4f, 0.2f), glm::vec3(0.4f, 0.7f, 1.0f), blend); 
+            lightColor = glm::mix(glm::vec3(1.0f, 0.5f, 0.2f), glm::vec3(1.0f, 1.0f, 0.9f), blend); 
+        } 
+        else { 
+            // NOTTE
+            skyColor = glm::vec3(0.05f, 0.05f, 0.1f); 
+            lightColor = glm::vec3(0.2f, 0.2f, 0.4f); 
+            lightDirection = glm::normalize(glm::vec3(sunX, 0.0f, sunZ));
+        }
+
+        // Applichiamo il colore del cielo al background
+        glClearColor(skyColor.r, skyColor.g, skyColor.b, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // Attiviamo lo shader
         terrainShader.use();
 
-        // Accendiamo il Sole!
-        glm::vec3 lightDirection = glm::vec3(-0.5f, -1.0f, -0.5f); // Luce che arriva dall'alto e da destra
-        glm::vec3 lightColor = glm::vec3(1.0f, 1.0f, 0.9f); // Luce solare leggermente calda
-        
-        glUniform3fv(glGetUniformLocation(terrainShader.ID, "lightDir"), 1, glm::value_ptr(lightDirection));
-        glUniform3fv(glGetUniformLocation(terrainShader.ID, "lightColor"), 1, glm::value_ptr(lightColor));
+        // --- ECCO LA CORREZIONE: USIAMO setVec3! ---
+        terrainShader.setVec3("lightDir", -lightDirection); 
+        terrainShader.setVec3("lightColor", lightColor);
 
         // -- MATEMATICA DELLA TELECAMERA (MVP) --
-        
-        // A. Projection Matrix (Prospettiva, FOV, Aspect Ratio)
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1000.0f / 800.0f, 0.1f, 1000.0f);
         
-        // B. View Matrix (Posizione e direzione della telecamera)
-        // Usiamo un po' di trigonometria per far ruotare la telecamera attorno al terreno col passare del tempo
-        float time = glfwGetTime();
-        float radius = 150.0f;
-        float camX = sin(time * 0.5f) * radius;
-        float camZ = cos(time * 0.5f) * radius;
-        
-        // Posizioniamo la telecamera in alto (Y=80) e la facciamo guardare verso il centro (0,0,0)
+        float camRadius = 150.0f;
+        float camX = sin(time * 0.2f) * camRadius;
+        float camZ = cos(time * 0.2f) * camRadius;
         glm::mat4 view = glm::lookAt(glm::vec3(camX, 80.0f, camZ), 
                                     glm::vec3(0.0f, 0.0f, 0.0f), 
                                     glm::vec3(0.0f, 1.0f, 0.0f));
 
-        // C. Model Matrix (Posizione del modello nel mondo)
         glm::mat4 model = glm::mat4(1.0f);
-        // Il terreno parte da X=0 e Z=0. Lo trasliamo per centrarlo nell'origine (0,0,0)
         model = glm::translate(model, glm::vec3(-(myTerrain.width * myTerrain.scale) / 2.0f, 0.0f, -(myTerrain.depth * myTerrain.scale) / 2.0f));
 
-        // Inviamo le matrici allo shader
         terrainShader.setMat4("projection", glm::value_ptr(projection));
         terrainShader.setMat4("view", glm::value_ptr(view));
         terrainShader.setMat4("model", glm::value_ptr(model));
 
         // -- DISEGNO DEL TERRENO --
         glBindVertexArray(VAO);
-        // Parametri: Tipo di primitiva, numero di indici, tipo di dati degli indici, offset
         glDrawElements(GL_TRIANGLES, myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
 
         glfwSwapBuffers(window);

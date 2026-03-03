@@ -6,6 +6,9 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class Shader {
 public:
@@ -19,6 +22,8 @@ public:
     
     // Funzioni per inviare dati (Uniforms) allo shader
     void setMat4(const std::string &name, const float* mat) const;
+
+    void setVec3(const std::string &name, const glm::vec3 &value) const;
 };
 
 #endif
