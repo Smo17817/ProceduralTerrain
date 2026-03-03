@@ -159,17 +159,26 @@ int main() {
 
         // 2. Acqua (Transparent)
         waterShader.use();
-        glm::mat4 modelWater = glm::mat4(1.0f); 
+
+        glm::mat4 modelWater = glm::mat4(1.0f);
+
         waterShader.setMat4("projection", glm::value_ptr(projection));
         waterShader.setMat4("view", glm::value_ptr(view));
         waterShader.setMat4("model", glm::value_ptr(modelWater));
+
         waterShader.setVec3("lightDir", lightDir);
         waterShader.setVec3("lightColor", lightColor);
         waterShader.setVec3("viewPos", camPos);
-        glUniform1f(glGetUniformLocation(waterShader.ID, "uTime"), time);
+        waterShader.setFloat("uTime", time);
+        waterShader.setFloat("waterLevel", waterLevel);
+
+        // trasparenza corretta
+        glDepthMask(GL_FALSE);
 
         glBindVertexArray(waterVAO);
         glDrawElements(GL_TRIANGLES, (GLsizei)waterIndices.size(), GL_UNSIGNED_INT, 0);
+
+        glDepthMask(GL_TRUE);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

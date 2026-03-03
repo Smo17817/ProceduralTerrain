@@ -1,27 +1,68 @@
 #version 330 core
+
 layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aNormal;
+
+uniform mat4 projection;
+uniform mat4 view;
+uniform mat4 model;
+
+uniform float uTime;
 
 out vec3 FragPos;
 out vec3 Normal;
-out float WaveHeight; // Passiamo l'altezza dell'onda per la spuma
 
-uniform mat4 model;
-uniform mat4 view;
-uniform mat4 projection;
-uniform float uTime;
+const float PI = 3.14159265;
 
-void main() {
+// Parametri onde
+vec3 gerstnerWave(vec3 pos, vec2 dir, float steepness, float wavelength, float speed)
+{
+    float k = 2.0 * PI / wavelength;
+    float c = speed;
+    float f = k * dot(dir, pos.xz) - c * uTime;
+    float a = steepness / k;
+
+    pos.x += dir.x * a * cos(f);
+    pos.z += dir.y * a * cos(f);
+    pos.y += a * sin(f);
+
+    return pos;
+}
+
+vec3 computeNormal(vec3 pos, vec2 dir, float steepness, float wavelength, float speed)
+{
+    float k = 2.0 * PI / wavelength;
+    float c = speed;
+    float f = k * dot(dir, pos.xz) - c * uTime;
+    float a = steepness / k;
+
+    float dx = dir.x * steepness * cos(f);
+    float dz = dir.y * steepness * cos(f);
+
+    vec3 tangent = normalize(vec3(1.0 - dx, dir.x * steepness * sin(f), -dz));
+    vec3 bitangent = normalize(vec3(-dx, dir.y * steepness * sin(f), 1.0 - dz));
+
+    return normalize(cross(bitangent, tangent));
+}
+
+void main()
+{
     vec3 pos = aPos;
-    
-    // Creiamo delle onde combinando più seni
-    float wave1 = sin(pos.x * 0.2 + uTime * 1.5) * 0.5;
-    float wave2 = cos(pos.z * 0.3 + uTime * 2.0) * 0.3;
-    pos.y += wave1 + wave2;
 
-    WaveHeight = wave1 + wave2; // Valore per capire dove c'è la cresta
+    vec2 dir1 = normalize(vec2(1.0, 0.5));
+    vec2 dir2 = normalize(vec2(-0.7, 0.3));
+    vec2 dir3 = normalize(vec2(0.2, -1.0));
+
+    pos = gerstnerWave(pos, dir1, 0.5, 40.0, 1.5);
+    pos = gerstnerWave(pos, dir2, 0.3, 25.0, 2.0);
+    pos = gerstnerWave(pos, dir3, 0.2, 15.0, 2.5);
+
+    vec3 normal = computeNormal(aPos, dir1, 0.5, 40.0, 1.5);
+    normal += computeNormal(aPos, dir2, 0.3, 25.0, 2.0);
+    normal += computeNormal(aPos, dir3, 0.2, 15.0, 2.5);
+    normal = normalize(normal);
+
     FragPos = vec3(model * vec4(pos, 1.0));
-    Normal = aNormal; // In un sistema avanzato calcoleremmo la normale dell'onda
-    
+    Normal = mat3(transpose(inverse(model))) * normal;
+
     gl_Position = projection * view * vec4(FragPos, 1.0);
 }
