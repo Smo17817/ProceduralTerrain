@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain",
+      "program": "c:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
