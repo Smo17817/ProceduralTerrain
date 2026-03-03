@@ -75,7 +75,7 @@ int main() {
 
         // --- CALCOLO DEL TEMPO E DEL SOLE ---
         float time = glfwGetTime();
-        float sunSpeed = 0.5f; 
+        float sunSpeed = 0.3f; 
         
         float sunX = cos(time * sunSpeed);
         float sunY = sin(time * sunSpeed);
