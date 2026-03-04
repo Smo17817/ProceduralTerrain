@@ -212,8 +212,8 @@ int main() {
         glBindVertexArray(cloudVAO);
 
         // Parametri per i Piani Multipli
-        int numLayers = 8;           // Quanti strati sovrapporre
-        float layerSpacing = 3.5f;   // Distanza in altezza tra uno strato e l'altro
+        int numLayers = 15;           // Quanti strati sovrapporre
+        float layerSpacing = 1.8f;   // Distanza in altezza tra uno strato e l'altro
         float startHeight = 110.0f;  // Altezza della base delle nuvole
 
         // Ciclo che disegna i piani dal basso verso l'alto

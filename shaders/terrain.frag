@@ -16,27 +16,42 @@ void main() {
     vec3 color;
     
     // DEFINIZIONE DEI BIOMI
-    if (Height < 2.0) {
-        // FONDALE
-        // Sabbia scura in profondità, sabbia chiara vicino alla superficie
-        float depthFactor = clamp((Height + 5.0) / 7.0, 0.0, 1.0);
+    if (Height < 4.0) {
+        // 1. Definiamo i tre colori della zona costiera
+        vec3 deepSand = vec3(0.08, 0.07, 0.05);   // Abissi
+        vec3 shallowSand = vec3(0.35, 0.32, 0.25); // Sabbia bagnata (sotto il pelo dell'acqua)
+        vec3 beachSand = vec3(0.82, 0.76, 0.62);   // Spiaggia asciutta
 
-        vec3 deepSand = vec3(0.08, 0.07, 0.05);   // sabbia scura
-        vec3 shallowSand = vec3(0.35, 0.32, 0.25); // sabbia chiara
+        // 2. Calcoliamo la sfumatura per gli abissi (da -5.0 a 1.0 di altezza)
+        float depthFactor = clamp((Height + 5.0) / 6.0, 0.0, 1.0);
+        vec3 underwaterColor = mix(deepSand, shallowSand, depthFactor);
 
-        color = mix(deepSand, shallowSand, depthFactor);
-    } 
-    else if (Height < 4.0) {
-        color = vec3(0.82, 0.76, 0.62); // Spiaggia più naturale
+        // 3. Sfuma dolcemente tra la sabbia bagnata e la spiaggia asciutta (tra altezza 1.0 e 3.0)
+        float shoreFactor = smoothstep(1.0, 3.0, Height);
+        
+        // Applica il mix finale
+        color = mix(underwaterColor, beachSand, shoreFactor);
     } 
     else if (Height < 15.0) {
-        color = vec3(0.25, 0.55, 0.28); // Erba meno saturata
+        // Transizione morbida anche tra spiaggia ed erba (opzionale, ma consigliato!)
+        vec3 beachSand = vec3(0.82, 0.76, 0.62);
+        vec3 grass = vec3(0.25, 0.55, 0.28);
+        float grassFactor = smoothstep(3.5, 6.0, Height);
+        color = mix(beachSand, grass, grassFactor);
     } 
     else if (Height < 25.0) {
-        color = vec3(0.45, 0.45, 0.47); // Roccia più fredda
+        // Transizione erba -> roccia
+        vec3 grass = vec3(0.25, 0.55, 0.28);
+        vec3 rock = vec3(0.45, 0.45, 0.47);
+        float rockFactor = smoothstep(13.0, 17.0, Height);
+        color = mix(grass, rock, rockFactor);
     } 
     else {
-        color = vec3(0.95, 0.95, 0.98); // Neve leggermente fredda
+        // Transizione roccia -> neve
+        vec3 rock = vec3(0.45, 0.45, 0.47);
+        vec3 snow = vec3(0.95, 0.95, 0.98);
+        float snowFactor = smoothstep(23.0, 26.0, Height);
+        color = mix(rock, snow, snowFactor);
     }
 
     // ILLUMINAZIONE
