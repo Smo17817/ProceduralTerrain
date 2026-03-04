@@ -12,6 +12,9 @@
 #include "Terrain.h"
 #include "Shader.h" 
 
+#define TINYOBJLOADER_IMPLEMENTATION
+#include "tiny_obj_loader.h"
+
 // Callback per il ridimensionamento della finestra
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
@@ -21,6 +24,56 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 void processInput(GLFWwindow *window) {
     if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+}
+
+// Una comoda struct per salvare i dati
+struct MeshData {
+    std::vector<float> vertices;    // (X, Y, Z, Nx, Ny, Nz)
+    std::vector<unsigned int> indices;
+};
+
+// Funzione che legge il file .obj
+MeshData loadTreeModel(const std::string& path) {
+    MeshData mesh;
+    tinyobj::ObjReaderConfig reader_config;
+    tinyobj::ObjReader reader;
+
+    if (!reader.ParseFromFile(path, reader_config)) {
+        if (!reader.Error().empty()) std::cout << "TinyObjReader Error: " << reader.Error() << "\n";
+        exit(1);
+    }
+
+    auto& attrib = reader.GetAttrib();
+    auto& shapes = reader.GetShapes();
+
+    // Estraiamo tutti i triangoli dal file OBJ
+    unsigned int currentIndex = 0;
+    for (size_t s = 0; s < shapes.size(); s++) {
+        size_t index_offset = 0;
+        for (size_t f = 0; f < shapes[s].mesh.num_face_vertices.size(); f++) {
+            for (size_t v = 0; v < 3; v++) { // Assumiamo che l'OBJ sia triangolato
+                tinyobj::index_t idx = shapes[s].mesh.indices[index_offset + v];
+
+                // 1. Posizione (X, Y, Z)
+                mesh.vertices.push_back(attrib.vertices[3 * size_t(idx.vertex_index) + 0]);
+                mesh.vertices.push_back(attrib.vertices[3 * size_t(idx.vertex_index) + 1]);
+                mesh.vertices.push_back(attrib.vertices[3 * size_t(idx.vertex_index) + 2]);
+
+                // 2. Normale (Nx, Ny, Nz)
+                if (idx.normal_index >= 0) {
+                    mesh.vertices.push_back(attrib.normals[3 * size_t(idx.normal_index) + 0]);
+                    mesh.vertices.push_back(attrib.normals[3 * size_t(idx.normal_index) + 1]);
+                    mesh.vertices.push_back(attrib.normals[3 * size_t(idx.normal_index) + 2]);
+                } else {
+                    mesh.vertices.push_back(0.0f); mesh.vertices.push_back(1.0f); mesh.vertices.push_back(0.0f);
+                }
+
+                mesh.indices.push_back(currentIndex++);
+            }
+            index_offset += 3;
+        }
+    }
+    return mesh;
 }
 
 int main() {
@@ -53,9 +106,59 @@ int main() {
     Shader terrainShader("../shaders/terrain.vert", "../shaders/terrain.frag");
     Shader waterShader("../shaders/water.vert", "../shaders/water.frag");
     Shader cloudShader("../shaders/cloud.vert", "../shaders/cloud.frag");
+    Shader treeShader("../shaders/tree.vert", "../shaders/tree.frag");
 
     // 3. Terreno
     Terrain myTerrain(500, 500, 1.5f);
+
+    // Carica il modello dell'albero
+    MeshData treeMesh = loadTreeModel("../assets/models/TreeLow.obj");
+
+    unsigned int treeVAO, treeVBO, treeEBO, instanceVBO;
+    glGenVertexArrays(1, &treeVAO);
+    glGenBuffers(1, &treeVBO);
+    glGenBuffers(1, &treeEBO);
+    glGenBuffers(1, &instanceVBO);
+
+    glBindVertexArray(treeVAO);
+
+    // VBO dei Vertici
+    glBindBuffer(GL_ARRAY_BUFFER, treeVBO);
+    glBufferData(GL_ARRAY_BUFFER, treeMesh.vertices.size() * sizeof(float), treeMesh.vertices.data(), GL_STATIC_DRAW);
+
+    // EBO degli Indici
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, treeEBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, treeMesh.indices.size() * sizeof(unsigned int), treeMesh.indices.data(), GL_STATIC_DRAW);
+
+    // Attributo 0: Posizione
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    // Attributo 1: Normale
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+
+    // --- INSTANCE VBO (Le matrici per posizionare gli alberi) ---
+    glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
+    glBufferData(GL_ARRAY_BUFFER, myTerrain.treeMatrices.size() * sizeof(glm::mat4), myTerrain.treeMatrices.data(), GL_STATIC_DRAW);
+
+    // Una matrice mat4 occupa 4 locazioni di attributi (da 2 a 5)
+    std::size_t vec4Size = sizeof(glm::vec4);
+    glEnableVertexAttribArray(2); 
+    glVertexAttribPointer(2, 4, GL_FLOAT, GL_FALSE, 4 * vec4Size, (void*)0);
+    glEnableVertexAttribArray(3); 
+    glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, 4 * vec4Size, (void*)(1 * vec4Size));
+    glEnableVertexAttribArray(4); 
+    glVertexAttribPointer(4, 4, GL_FLOAT, GL_FALSE, 4 * vec4Size, (void*)(2 * vec4Size));
+    glEnableVertexAttribArray(5); 
+    glVertexAttribPointer(5, 4, GL_FLOAT, GL_FALSE, 4 * vec4Size, (void*)(3 * vec4Size));
+
+    // Diciamo a OpenGL che questi attributi cambiano PER ISTANZA (non per vertice)
+    glVertexAttribDivisor(2, 1);
+    glVertexAttribDivisor(3, 1);
+    glVertexAttribDivisor(4, 1);
+    glVertexAttribDivisor(5, 1);
+
+    glBindVertexArray(0);
     
     unsigned int VAO, VBO, EBO;
     glGenVertexArrays(1, &VAO);
@@ -175,8 +278,8 @@ int main() {
 
         // Telecamera
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1000.0f / 800.0f, 0.1f, 2000.0f);
-        float camX = sin(time * 0.15f) * 350.0f;
-        float camZ = cos(time * 0.15f) * 350.0f;
+        float camX = sin(time * 0.1f) * 350.0f;
+        float camZ = cos(time * 0.1f) * 350.0f;
         glm::vec3 camPos = glm::vec3(camX, 100.0f, camZ);
         glm::mat4 view = glm::lookAt(camPos, glm::vec3(0.0f, 40.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         
@@ -235,6 +338,22 @@ int main() {
         }
 
         glDepthMask(GL_TRUE); // Riabilita la scrittura della profondità
+
+        // --- Alberi ---
+        treeShader.use();
+        treeShader.setMat4("projection", glm::value_ptr(projection));
+        treeShader.setMat4("view", glm::value_ptr(view));
+        // Nota: non passiamo "model" perché ogni albero ha la sua matrice dentro aInstanceMatrix!
+        
+        treeShader.setVec3("lightDir", lightDir);
+        treeShader.setVec3("lightColor", lightColor);
+        treeShader.setVec3("viewPos", camPos);
+        treeShader.setVec3("fogColor", skyColor);
+        treeShader.setFloat("fogDensity", 0.001f); // Stessa nebbia del terreno
+
+        glBindVertexArray(treeVAO);
+        // ECCO LA MAGIA: Disegna l'albero N volte!
+        glDrawElementsInstanced(GL_TRIANGLES, treeMesh.indices.size(), GL_UNSIGNED_INT, 0, myTerrain.treeMatrices.size());
 
         // Acqua
         waterShader.use();
