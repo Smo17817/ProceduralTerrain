@@ -269,8 +269,7 @@ int main() {
         float time = (float)glfwGetTime();
         
         // --- ILLUMINAZIONE DINAMICA (CICLO GIORNO/NOTTE) ---
-        float daySpeed = 0.1f; // Velocità del sole
-        // Calcoliamo la direzione del sole facendolo ruotare
+        float daySpeed = 0.05f; // MOLTO più lento (era 0.3f)
         glm::vec3 sunDir = glm::normalize(glm::vec3(
             cos(time * daySpeed),
             sin(time * daySpeed), // Questa è l'altezza del sole (Y)
@@ -282,16 +281,17 @@ int main() {
         
         float sunHeight = sunDir.y; // Va da 1.0 (mezzogiorno) a -1.0 (mezzanotte)
 
-        // Palette Colori
+        // Palette Colori Notturni MOLTO più luminosi e blu notte
         glm::vec3 skyDay   = glm::vec3(0.4f, 0.7f, 1.0f);
-        glm::vec3 skyDawn  = glm::vec3(0.8f, 0.4f, 0.2f); // Tramonto/Alba
-        glm::vec3 skyNight = glm::vec3(0.02f, 0.02f, 0.05f);
+        glm::vec3 skyDawn  = glm::vec3(0.8f, 0.4f, 0.2f);
+        glm::vec3 skyNight = glm::vec3(0.08f, 0.12f, 0.25f); // Alzato e più blu
 
         glm::vec3 lightDay   = glm::vec3(1.0f, 1.0f, 0.9f);
         glm::vec3 lightDawn  = glm::vec3(1.0f, 0.6f, 0.3f);
-        glm::vec3 lightNight = glm::vec3(0.15f, 0.2f, 0.4f);
-
+        glm::vec3 lightNight = glm::vec3(0.35f, 0.40f, 0.55f); // Schiarito notevolmente
+        
         glm::vec3 skyColor, lightColor;
+    
 
         // Misceliamo i colori in base all'altezza del sole
         if (sunHeight > 0.2f) { // Giorno pieno
