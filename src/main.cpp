@@ -55,7 +55,7 @@ int main() {
     Shader cloudShader("../shaders/cloud.vert", "../shaders/cloud.frag");
 
     // 3. Terreno
-    Terrain myTerrain(250, 250, 1.5f);
+    Terrain myTerrain(500, 500, 1.5f);
     
     unsigned int VAO, VBO, EBO;
     glGenVertexArrays(1, &VAO);
@@ -178,7 +178,7 @@ int main() {
         float camX = sin(time * 0.15f) * 350.0f;
         float camZ = cos(time * 0.15f) * 350.0f;
         glm::vec3 camPos = glm::vec3(camX, 100.0f, camZ);
-        glm::mat4 view = glm::lookAt(camPos, glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+        glm::mat4 view = glm::lookAt(camPos, glm::vec3(0.0f, 40.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
         
         // Matrice Terreno
         glm::mat4 modelTerrain = glm::mat4(1.0f);
@@ -202,24 +202,39 @@ int main() {
 
         // Nuvole
         cloudShader.use();
-
         cloudShader.setMat4("projection", glm::value_ptr(projection));
         cloudShader.setMat4("view", glm::value_ptr(view));
-
-        glm::mat4 modelCloud = glm::mat4(1.0f);
-        // Abbassate da 150.0f a 120.0f per renderle ben visibili
-        modelCloud = glm::translate(modelCloud, glm::vec3(camPos.x, 110.0f, camPos.z)); 
-        cloudShader.setMat4("model", glm::value_ptr(modelCloud));
-
         cloudShader.setFloat("uTime", time);
         cloudShader.setVec3("skyColor", skyColor);
-        // QUESTA RIGA È VITALE: senza questa, il fade nasconde tutto!
-        cloudShader.setVec3("viewPos", camPos); 
+        cloudShader.setVec3("viewPos", camPos);
 
-        glDepthMask(GL_FALSE);
+        glDepthMask(GL_FALSE); // Disabilita la scrittura della profondità per le trasparenze
         glBindVertexArray(cloudVAO);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        glDepthMask(GL_TRUE);
+
+        // Parametri per i Piani Multipli
+        int numLayers = 8;           // Quanti strati sovrapporre
+        float layerSpacing = 3.5f;   // Distanza in altezza tra uno strato e l'altro
+        float startHeight = 110.0f;  // Altezza della base delle nuvole
+
+        // Ciclo che disegna i piani dal basso verso l'alto
+        for (int i = 0; i < numLayers; ++i) {
+            // Calcola la percentuale di altezza (da 0.0 a 1.0)
+            float layerFraction = (float)i / (float)(numLayers - 1); 
+            float currentHeight = startHeight + (i * layerSpacing);
+
+            // Sposta il piano all'altezza corrente
+            glm::mat4 modelCloud = glm::mat4(1.0f);
+            modelCloud = glm::translate(modelCloud, glm::vec3(camPos.x, currentHeight, camPos.z));
+            cloudShader.setMat4("model", glm::value_ptr(modelCloud));
+
+            // Invia i dati allo shader per ombreggiare e scolpire lo strato
+            cloudShader.setFloat("uLayerFraction", layerFraction);
+            cloudShader.setFloat("uLayerOffset", (float)i * 0.02f); // Leggero sfalsamento
+
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        }
+
+        glDepthMask(GL_TRUE); // Riabilita la scrittura della profondità
 
         // Acqua
         waterShader.use();
