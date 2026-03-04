@@ -200,7 +200,7 @@ int main() {
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, (GLsizei)myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
 
-        // Nuvole
+        // --- Nuvole 2.5D ---
         cloudShader.use();
         cloudShader.setMat4("projection", glm::value_ptr(projection));
         cloudShader.setMat4("view", glm::value_ptr(view));
