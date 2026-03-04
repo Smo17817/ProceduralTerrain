@@ -268,10 +268,44 @@ int main() {
 
         float time = (float)glfwGetTime();
         
-        // Ambiente fisso
-        glm::vec3 skyColor = glm::vec3(0.4f, 0.7f, 1.0f);
-        glm::vec3 lightDir = glm::normalize(glm::vec3(-0.5f, -1.0f, -0.5f));
-        glm::vec3 lightColor = glm::vec3(1.0f, 1.0f, 0.9f);
+        // --- ILLUMINAZIONE DINAMICA (CICLO GIORNO/NOTTE) ---
+        float daySpeed = 0.1f; // Velocità del sole
+        // Calcoliamo la direzione del sole facendolo ruotare
+        glm::vec3 sunDir = glm::normalize(glm::vec3(
+            cos(time * daySpeed),
+            sin(time * daySpeed), // Questa è l'altezza del sole (Y)
+            sin(time * daySpeed) * 0.3f // Leggera inclinazione sull'asse Z
+        ));
+
+        // Invertiamo per OpenGL (la luce punta VERSO gli oggetti)
+        glm::vec3 lightDir = -sunDir; 
+        
+        float sunHeight = sunDir.y; // Va da 1.0 (mezzogiorno) a -1.0 (mezzanotte)
+
+        // Palette Colori
+        glm::vec3 skyDay   = glm::vec3(0.4f, 0.7f, 1.0f);
+        glm::vec3 skyDawn  = glm::vec3(0.8f, 0.4f, 0.2f); // Tramonto/Alba
+        glm::vec3 skyNight = glm::vec3(0.02f, 0.02f, 0.05f);
+
+        glm::vec3 lightDay   = glm::vec3(1.0f, 1.0f, 0.9f);
+        glm::vec3 lightDawn  = glm::vec3(1.0f, 0.6f, 0.3f);
+        glm::vec3 lightNight = glm::vec3(0.15f, 0.2f, 0.4f);
+
+        glm::vec3 skyColor, lightColor;
+
+        // Misceliamo i colori in base all'altezza del sole
+        if (sunHeight > 0.2f) { // Giorno pieno
+            float t = glm::smoothstep(0.2f, 0.5f, sunHeight);
+            skyColor = mix(skyDawn, skyDay, t);
+            lightColor = mix(lightDawn, lightDay, t);
+        } else if (sunHeight > -0.2f) { // Tramonto
+            float t = glm::smoothstep(-0.2f, 0.2f, sunHeight);
+            skyColor = mix(skyNight, skyDawn, t);
+            lightColor = mix(lightNight, lightDawn, t);
+        } else { // Notte
+            skyColor = skyNight;
+            lightColor = lightNight;
+        }
 
         glClearColor(skyColor.r, skyColor.g, skyColor.b, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -299,6 +333,9 @@ int main() {
         terrainShader.setVec3("viewPos", camPos);
         terrainShader.setVec3("fogColor", skyColor);
         terrainShader.setFloat("fogDensity", 0.001f);
+        
+        // AGGIUNGI QUESTA RIGA PER FAR MUOVERE LE OMBRE!
+        terrainShader.setFloat("uTime", time); 
 
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, (GLsizei)myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
@@ -310,6 +347,7 @@ int main() {
         cloudShader.setFloat("uTime", time);
         cloudShader.setVec3("skyColor", skyColor);
         cloudShader.setVec3("viewPos", camPos);
+        cloudShader.setVec3("lightColor", lightColor);
 
         glDepthMask(GL_FALSE); // Disabilita la scrittura della profondità per le trasparenze
         glBindVertexArray(cloudVAO);

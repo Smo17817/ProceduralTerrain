@@ -6,6 +6,7 @@ in vec3 WorldPos;
 uniform float uTime;
 uniform vec3 skyColor;
 uniform vec3 viewPos;
+uniform vec3 lightColor; // AGGIUNTA QUESTA RIGA
 
 // Nuove variabili per la tridimensionalità
 uniform float uLayerFraction; // Va da 0.0 (base) a 1.0 (cima)
@@ -41,31 +42,26 @@ void main() {
         amp *= 0.5;
     }
 
-    // SCULTURA 3D: La nuvola è più spessa al centro e svanisce in alto e in basso
-    // sin(uLayerFraction * PI) crea un arco: 0 ai bordi, 1 al centro
     float layerShape = sin(uLayerFraction * 3.14159); 
-    
-    // Riduciamo la soglia al centro per far apparire più nuvola
     float thresholdMin = 0.55 - (layerShape * 0.25); 
     float thresholdMax = 0.75 - (layerShape * 0.15);
     float clouds = smoothstep(thresholdMin, thresholdMax, n);
 
-    // Fading all'orizzonte (basato sulla telecamera)
+    // Fading all'orizzonte
     float radius = 600.0;
     float dist = length(WorldPos.xz - viewPos.xz);
     float fade = 1.0 - smoothstep(radius * 0.5, radius * 0.95, dist);
     clouds *= fade;
 
-    // OMBREGGIATURA: La base della nuvola (uLayerFraction vicino a 0) sarà più scura!
-    vec3 cloudBaseColor = mix(skyColor * 0.6, vec3(1.0), uLayerFraction * 0.8 + 0.2);
+    // OMBREGGIATURA: Mescoliamo il colore del cielo con il bianco, scalato per la luce
+    // Aggiungiamo un valore minimo (0.2) per la notte
+    vec3 lightIntensity = max(lightColor, vec3(0.2)); 
+    vec3 cloudBaseColor = mix(skyColor * 0.8, vec3(1.0), uLayerFraction * 0.6 + 0.4);
     
-    // AUMENTIAMO L'OPACITÀ:
-    // Prima moltiplicavamo per 0.25. Alziamo il valore a 0.6 (o anche 0.8) 
-    // per rendere ogni singolo strato di nuvola molto più "denso" e visibile.
     float alpha = clouds * 0.6 * layerShape; 
 
-    if(alpha < 0.02)
-        discard;
+    if(alpha < 0.01) discard;
 
-    FragColor = vec4(cloudBaseColor, alpha);
+    // Il colore finale ora reagisce al lightColor del main
+    FragColor = vec4(cloudBaseColor * lightIntensity, alpha);
 }
