@@ -52,6 +52,7 @@ int main() {
     // 2. Shader
     Shader terrainShader("../shaders/terrain.vert", "../shaders/terrain.frag");
     Shader waterShader("../shaders/water.vert", "../shaders/water.frag");
+    Shader cloudShader("../shaders/cloud.vert", "../shaders/cloud.frag");
 
     // 3. Terreno
     Terrain myTerrain(250, 250, 1.5f);
@@ -71,6 +72,42 @@ int main() {
     glEnableVertexAttribArray(0);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
+
+    // Nuvole (semplice quad con shader di rumore)
+    float cloudHeight = 0.0f;
+    float cloudSize = 1200.0f;
+
+    float cloudVertices[] = {
+        -cloudSize, cloudHeight, -cloudSize,
+        cloudSize, cloudHeight, -cloudSize,
+        cloudSize, cloudHeight,  cloudSize,
+        -cloudSize, cloudHeight,  cloudSize
+    };
+
+    unsigned int cloudIndices[] = {
+        0,1,2,
+        2,3,0
+    };
+
+    unsigned int cloudVAO, cloudVBO, cloudEBO;
+
+    glGenVertexArrays(1, &cloudVAO);
+    glGenBuffers(1, &cloudVBO);
+    glGenBuffers(1, &cloudEBO);
+
+    glBindVertexArray(cloudVAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, cloudVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(cloudVertices), cloudVertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, cloudEBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(cloudIndices), cloudIndices, GL_STATIC_DRAW);
+
+    // solo posizione (3 float)
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+    glBindVertexArray(0);
 
     // 4. Griglia Acqua (Necessaria per le onde nel Vertex Shader)
     float waterLevel = 1.8f; 
@@ -147,7 +184,7 @@ int main() {
         glm::mat4 modelTerrain = glm::mat4(1.0f);
         modelTerrain = glm::translate(modelTerrain, glm::vec3(-(myTerrain.width * myTerrain.scale) / 2.0f, 0.0f, -(myTerrain.depth * myTerrain.scale) / 2.0f));
 
-        // 1. Terreno (Opaque)
+        // Terreno
         terrainShader.use();
         terrainShader.setMat4("projection", glm::value_ptr(projection));
         terrainShader.setMat4("view", glm::value_ptr(view));
@@ -163,7 +200,28 @@ int main() {
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, (GLsizei)myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
 
-        // 2. Acqua (Transparent)
+        // Nuvole
+        cloudShader.use();
+
+        cloudShader.setMat4("projection", glm::value_ptr(projection));
+        cloudShader.setMat4("view", glm::value_ptr(view));
+
+        glm::mat4 modelCloud = glm::mat4(1.0f);
+        // Abbassate da 150.0f a 120.0f per renderle ben visibili
+        modelCloud = glm::translate(modelCloud, glm::vec3(camPos.x, 110.0f, camPos.z)); 
+        cloudShader.setMat4("model", glm::value_ptr(modelCloud));
+
+        cloudShader.setFloat("uTime", time);
+        cloudShader.setVec3("skyColor", skyColor);
+        // QUESTA RIGA È VITALE: senza questa, il fade nasconde tutto!
+        cloudShader.setVec3("viewPos", camPos); 
+
+        glDepthMask(GL_FALSE);
+        glBindVertexArray(cloudVAO);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        glDepthMask(GL_TRUE);
+
+        // Acqua
         waterShader.use();
 
         glm::mat4 modelWater = glm::mat4(1.0f);
@@ -196,6 +254,7 @@ int main() {
 
     glDeleteVertexArrays(1, &VAO); glDeleteBuffers(1, &VBO); glDeleteBuffers(1, &EBO);
     glDeleteVertexArrays(1, &waterVAO); glDeleteBuffers(1, &waterVBO); glDeleteBuffers(1, &waterEBO);
+    glDeleteVertexArrays(1, &cloudVAO); glDeleteBuffers(1, &cloudVBO); glDeleteBuffers(1, &cloudEBO);
     glfwTerminate();
     
     return 0;
