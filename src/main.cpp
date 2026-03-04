@@ -152,8 +152,14 @@ int main() {
         terrainShader.setMat4("projection", glm::value_ptr(projection));
         terrainShader.setMat4("view", glm::value_ptr(view));
         terrainShader.setMat4("model", glm::value_ptr(modelTerrain));
+
         terrainShader.setVec3("lightDir", lightDir);
         terrainShader.setVec3("lightColor", lightColor);
+
+        terrainShader.setVec3("viewPos", camPos);
+        terrainShader.setVec3("fogColor", skyColor);
+        terrainShader.setFloat("fogDensity", 0.001f);
+
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, (GLsizei)myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
 
@@ -171,6 +177,10 @@ int main() {
         waterShader.setVec3("viewPos", camPos);
         waterShader.setFloat("uTime", time);
         waterShader.setFloat("waterLevel", waterLevel);
+
+        waterShader.setVec3("viewPos", camPos);
+        waterShader.setVec3("fogColor", skyColor);
+        waterShader.setFloat("fogDensity", 0.001f);
 
         // trasparenza corretta
         glDepthMask(GL_FALSE);

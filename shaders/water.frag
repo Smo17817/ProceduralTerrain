@@ -12,6 +12,9 @@ uniform vec3 viewPos;
 uniform float waterLevel;
 uniform float uTime;
 
+uniform vec3 fogColor;
+uniform float fogDensity;
+
 //
 // Simple pseudo-noise
 //
@@ -70,5 +73,12 @@ void main()
     // Alpha dinamico
     float alpha = 0.65 + fresnel * 0.3;
 
-    FragColor = vec4(finalColor, alpha);
+    // FOG
+    float distance = length(viewPos - FragPos);
+    float fogFactor = exp(-fogDensity * distance);
+    fogFactor = clamp(fogFactor, 0.0, 1.0);
+
+    vec3 foggedColor = mix(fogColor, finalColor, fogFactor);
+
+    FragColor = vec4(foggedColor, alpha);
 }

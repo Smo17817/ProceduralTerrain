@@ -8,6 +8,10 @@ in vec3 FragPos;
 uniform vec3 lightDir;
 uniform vec3 lightColor;
 
+uniform vec3 viewPos;
+uniform vec3 fogColor;
+uniform float fogDensity;
+
 void main() {
     vec3 color;
     
@@ -45,5 +49,13 @@ void main() {
     vec3 diffuse = diff * lightColor;
 
     vec3 result = (ambient + diffuse) * color;
-    FragColor = vec4(result, 1.0);
+
+    // FOG
+    float distance = length(viewPos - FragPos);
+    float fogFactor = exp(-fogDensity * distance);
+    fogFactor = clamp(fogFactor, 0.0, 1.0);
+
+    vec3 finalColor = mix(fogColor, result, fogFactor);
+
+    FragColor = vec4(finalColor, 1.0);
 }
