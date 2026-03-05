@@ -76,6 +76,54 @@ MeshData loadTreeModel(const std::string& path) {
     return mesh;
 }
 
+// Funzione per generare una sfera procedurale
+void createSphere(unsigned int& vao, unsigned int& vbo, unsigned int& ebo, int& indexCount) {
+    std::vector<float> vertices;
+    std::vector<unsigned int> indices;
+    int stacks = 20;
+    int slices = 20;
+    float radius = 1.0f;
+    const float PI = 3.14159265f;
+
+    // Genera vertici
+    for (int i = 0; i <= stacks; ++i) {
+        float V = i / (float)stacks;
+        float phi = V * PI;
+        for (int j = 0; j <= slices; ++j) {
+            float U = j / (float)slices;
+            float theta = U * (PI * 2.0f);
+            float x = radius * cos(theta) * sin(phi);
+            float y = radius * cos(phi);
+            float z = radius * sin(theta) * sin(phi);
+            vertices.push_back(x); vertices.push_back(y); vertices.push_back(z);
+        }
+    }
+    // Genera indici
+    for (int i = 0; i < stacks; ++i) {
+        for (int j = 0; j < slices; ++j) {
+            indices.push_back(i * (slices + 1) + j);
+            indices.push_back((i + 1) * (slices + 1) + j);
+            indices.push_back(i * (slices + 1) + j + 1);
+            indices.push_back(i * (slices + 1) + j + 1);
+            indices.push_back((i + 1) * (slices + 1) + j);
+            indices.push_back((i + 1) * (slices + 1) + j + 1);
+        }
+    }
+    indexCount = indices.size();
+
+    glGenVertexArrays(1, &vao);
+    glGenBuffers(1, &vbo);
+    glGenBuffers(1, &ebo);
+    glBindVertexArray(vao);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo);
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    glBindVertexArray(0);
+}
+
 int main() {
     // 1. Inizializzazione GLFW
     glfwInit();
@@ -107,6 +155,7 @@ int main() {
     Shader waterShader("../shaders/water.vert", "../shaders/water.frag");
     Shader cloudShader("../shaders/cloud.vert", "../shaders/cloud.frag");
     Shader treeShader("../shaders/tree.vert", "../shaders/tree.frag");
+    Shader sunShader("../shaders/sun.vert", "../shaders/sun.frag");
 
     // 3. Terreno
     Terrain myTerrain(500, 500, 1.5f);
@@ -262,6 +311,11 @@ int main() {
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
 
+    // --- Setup Sfera del Sole ---
+    unsigned int sunVAO, sunVBO, sunEBO;
+    int sunIndexCount;
+    createSphere(sunVAO, sunVBO, sunEBO, sunIndexCount);
+
     // 5. Loop di Rendering
     while (!glfwWindowShouldClose(window)) {
         processInput(window);
@@ -270,10 +324,14 @@ int main() {
         
         // --- ILLUMINAZIONE DINAMICA (CICLO GIORNO/NOTTE) ---
         float daySpeed = 0.05f; // MOLTO più lento (era 0.3f)
+
+        // Aggiungiamo un piccolo offset (0.2f) così parte un pelo sopra l'orizzonte (alba)
+        float dayTime = (time * daySpeed); 
+        
         glm::vec3 sunDir = glm::normalize(glm::vec3(
-            cos(time * daySpeed),
-            sin(time * daySpeed), // Questa è l'altezza del sole (Y)
-            sin(time * daySpeed) * 0.3f // Leggera inclinazione sull'asse Z
+            sin(dayTime) * 0.3f, // Leggero spostamento laterale
+            sin(dayTime),        // Questa è l'altezza del sole (Y)
+            -cos(dayTime)        // Asse Z negativo: sorge esattamente davanti alla telecamera!
         ));
 
         // Invertiamo per OpenGL (la luce punta VERSO gli oggetti)
@@ -291,7 +349,6 @@ int main() {
         glm::vec3 lightNight = glm::vec3(0.35f, 0.40f, 0.55f); // Schiarito notevolmente
         
         glm::vec3 skyColor, lightColor;
-    
 
         // Misceliamo i colori in base all'altezza del sole
         if (sunHeight > 0.2f) { // Giorno pieno
@@ -339,6 +396,27 @@ int main() {
 
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, (GLsizei)myTerrain.indices.size(), GL_UNSIGNED_INT, 0);
+
+        // --- 1. DISEGNO SOLE (Opaco, molto lontano) ---
+        sunShader.use();
+        sunShader.setMat4("projection", glm::value_ptr(projection));
+        sunShader.setMat4("view", glm::value_ptr(view));
+        
+        // Posizioniamo il sole molto lontano
+        glm::vec3 sunPos = camPos + sunDir * 800.0f; 
+        glm::mat4 modelSun = glm::mat4(1.0f);
+        modelSun = glm::translate(modelSun, sunPos);
+        modelSun = glm::scale(modelSun, glm::vec3(40.0f)); 
+        sunShader.setMat4("model", glm::value_ptr(modelSun));
+        
+        glm::vec3 sunColorDay = glm::vec3(1.0f, 1.0f, 0.9f);
+        glm::vec3 sunColorDawn = glm::vec3(1.0f, 0.5f, 0.0f); 
+        glm::vec3 actualSunColor = mix(sunColorDawn, sunColorDay, glm::smoothstep(0.0f, 0.3f, sunHeight));
+        
+        sunShader.setVec3("sunColor", actualSunColor);
+
+        glBindVertexArray(sunVAO);
+        glDrawElements(GL_TRIANGLES, sunIndexCount, GL_UNSIGNED_INT, 0);
 
         // --- Nuvole 2.5D ---
         cloudShader.use();
