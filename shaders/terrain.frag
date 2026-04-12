@@ -11,10 +11,10 @@ uniform vec3 viewPos;
 uniform vec3 fogColor;
 uniform float fogDensity;
 
-// Nuova uniform per far scorrere le ombre
+// New uniform to make the shadows scroll
 uniform float uTime; 
 
-// --- FUNZIONI DI RUMORE (Copiate dalle nuvole!) ---
+// --- NOISE FUNCTIONS (Copied from the clouds) ---
 float hash(vec2 p) {
     return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
 }
@@ -30,7 +30,7 @@ float noise(vec2 p) {
 void main() {
     vec3 color;
     
-    // DEFINIZIONE DEI BIOMI (Tutto identico a prima)
+    // BIOME DEFINITION
     if (Height < 4.0) {
         vec3 deepSand = vec3(0.08, 0.07, 0.05);
         vec3 shallowSand = vec3(0.35, 0.32, 0.25);
@@ -59,35 +59,35 @@ void main() {
         color = mix(rock, snow, snowFactor);
     }
 
-    // --- CALCOLO OMBRA DELLE NUVOLE ---
-    // Stessa scala e velocità usate nel cloud.frag!
+    // --- CLOUD SHADOW CALCULATION ---
+    // Same scale and speed used in cloud.frag
     vec2 uv = FragPos.xz * 0.003 + vec2(uTime * 0.02, uTime * 0.015);
     float n = 0.0; float amp = 0.5; float freq = 1.0;
     
-    // 4 iterazioni bastano per l'ombra (più leggero per la GPU)
+    // 4 iterations are enough for the shadow (lighter on the GPU)
     for(int i = 0; i < 4; i++) {
         n += noise(uv * freq) * amp;
         freq *= 2.0; amp *= 0.5;
     }
 
-    // Se n è alto, c'è una nuvola densa.
+    // If n is high, there is a dense cloud.
     float cloudDensity = smoothstep(0.45, 0.75, n); 
     
-    // Creiamo un moltiplicatore d'ombra: 1.0 = Sole pieno, 0.4 = Ombra scura (max 60% oscurità)
+    // Create a shadow multiplier: 1.0 = Full sun, 0.4 = Dark shadow (max 60% darkness)
     float shadowFactor = 1.0 - (cloudDensity * 0.6); 
 
-    // ILLUMINAZIONE
-    // Di notte l'ambiente lunare è sufficiente
+    // LIGHTING
+    // At night the lunar ambient is sufficient
     float ambientStrength = 0.3;
     vec3 ambient = ambientStrength * lightColor;
 
     vec3 norm = normalize(Normal);
     vec3 lightDirNormalized = normalize(-lightDir); 
     
-    // Applichiamo il sole (se sotto l'orizzonte sarà 0 grazie al max)
+    // Apply the sun (if below the horizon it will be 0 thanks to max)
     float diff = max(dot(norm, lightDirNormalized), 0.0);
     
-    // ECCO LA MAGIA: Moltiplichiamo la luce diretta per l'ombra delle nuvole!
+    // HERE IS THE MAGIC: Multiply the direct light by the cloud shadow
     vec3 diffuse = diff * lightColor * shadowFactor; 
 
     vec3 result = (ambient + diffuse) * color;

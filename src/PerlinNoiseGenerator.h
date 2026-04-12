@@ -37,7 +37,7 @@ public:
         p.insert(p.end(), p.begin(), p.end());
     }
 
-    // Rumore di base (singolo strato)
+    // Base noise (single layer)
     float noise(float x, float y) const {
         int X = (int)std::floor(x) & 255;
         int Y = (int)std::floor(y) & 255;
@@ -59,20 +59,20 @@ public:
         return res;
     }
 
-    // Fractal Brownian Motion (fBm) per terreni realistici
+    // Fractal Brownian Motion (fBm) for realistic terrain
     float fractal(int octaves, float x, float y, float persistence = 0.5f, float lacunarity = 2.0f) const {
         float total = 0.0f;
         float frequency = 1.0f;
         float amplitude = 1.0f;
-        float maxValue = 0.0f;  // Usato per normalizzare il risultato
+        float maxValue = 0.0f;  // Used to normalize the result
         
         for(int i = 0; i < octaves; i++) {
             total += noise(x * frequency, y * frequency) * amplitude;
             
             maxValue += amplitude;
             
-            amplitude *= persistence; // Il peso di ogni strato diminuisce
-            frequency *= lacunarity;  // Il dettaglio di ogni strato aumenta
+            amplitude *= persistence; // The weight of each layer decreases
+            frequency *= lacunarity;  // The detail of each layer increases
         }
         
         return total / maxValue;

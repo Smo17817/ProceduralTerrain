@@ -13,17 +13,17 @@ uniform vec3 fogColor;
 uniform float fogDensity;
 
 void main() {
-    // 1. COLORAZIONE PROCEDURALE (Tronco vs Chioma)
-    vec3 trunkColor = vec3(0.35, 0.22, 0.15); // Marrone legno
-    vec3 leafColor = vec3(0.18, 0.45, 0.20);  // Verde foresta
+    // 1. PROCEDURAL COLORING (Trunk vs Leaves)
+    vec3 trunkColor = vec3(0.35, 0.22, 0.15); // Wood brown
+    vec3 leafColor = vec3(0.18, 0.45, 0.20);  // Forest green
     
-    // Crea una transizione tra tronco e foglie
-    // NOTA: I valori 0.5 e 1.5 dipendono dalle dimensioni del tuo file "TreeLow.obj".
-    // Se l'albero è interamente marrone o interamente verde, prova ad alzare o abbassare questi due numeri!
+    // Create a transition between trunk and leaves
+    // NOTE: The values 0.5 and 1.5 depend on the dimensions of your "TreeLow.obj" file.
+    // If the tree is entirely brown or entirely green, try raising or lowering these two numbers!
     float isLeaf = smoothstep(10.0, 120.0, LocalY); 
     vec3 objectColor = mix(trunkColor, leafColor, isLeaf);
 
-    // 2. ILLUMINAZIONE (Ambientale + Diffusa)
+    // 2. LIGHTING (Ambient + Diffuse)
     float ambientStrength = 0.3;
     vec3 ambient = ambientStrength * lightColor;
 
@@ -34,7 +34,7 @@ void main() {
 
     vec3 result = (ambient + diffuse) * objectColor;
 
-    // 3. NEBBIA (Stessa matematica del terreno)
+    // 3. FOG (Same math as the terrain)
     float distance = length(viewPos - FragPos);
     float fogFactor = exp(-fogDensity * distance);
     fogFactor = clamp(fogFactor, 0.0, 1.0);

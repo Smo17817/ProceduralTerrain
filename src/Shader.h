@@ -12,15 +12,15 @@
 
 class Shader {
 public:
-    unsigned int ID; // L'ID del programma shader sulla GPU
+    unsigned int ID; // The ID of the shader program on the GPU
 
-    // Costruttore che legge e compila gli shader
+    // Constructor that reads and compiles the shaders
     Shader(const char* vertexPath, const char* fragmentPath);
     
-    // Attiva lo shader
+    // Activate the shader
     void use();
     
-    // Funzioni per inviare dati (Uniforms) allo shader
+    // Functions to send data (Uniforms) to the shader
     void setMat4(const std::string &name, const float* mat) const;
 
     void setVec3(const std::string &name, const glm::vec3 &value) const;

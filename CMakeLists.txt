@@ -3,16 +3,16 @@ project(ProceduralTerrain)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# 1. Includi le cartelle per gli header (.h)
+# 1. Include the header directories (.h)
 include_directories(include)
 
-# 2. Diciamo a CMake dove trovare la cartella 'lib' con dentro libglfw3dll.a
+# 2. Tell CMake where to find the 'lib' folder containing libglfw3dll.a
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-# Trova OpenGL di sistema
+# Find system OpenGL
 find_package(OpenGL REQUIRED)
 
-# Aggiungi i file sorgente (ATTENZIONE: glad.c ora è obbligatorio!)
+# Add source files (ATTENTION: glad.c is now required!)
 set(SOURCES
     src/main.cpp
     src/Shader.cpp
@@ -24,5 +24,5 @@ set(SOURCES
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-# 3. Linka le librerie usando "glfw3dll"
+# 3. Link the libraries using "glfw3dll"
 target_link_libraries(${PROJECT_NAME} OpenGL::GL glfw3)

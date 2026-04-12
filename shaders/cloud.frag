@@ -24,10 +24,10 @@ float noise(vec2 p) {
 }
 
 void main() {
-    // 1. Calcolo Coordinate e Animazione Nuvole
+    // 1. Coordinate Calculation and Cloud Animation
     vec2 uv = WorldPos.xz * 0.003 + vec2(uTime * 0.02, uTime * 0.015) + vec2(uLayerOffset);
     
-    // 2. Generazione FBM (Fractal Brownian Motion) per la densità
+    // 2. FBM (Fractal Brownian Motion) Generation for density
     float n = 0.0; 
     float amp = 0.5; 
     float freq = 1.0;
@@ -37,24 +37,24 @@ void main() {
         amp *= 0.5;
     }
 
-    // 3. Modellazione della forma dello strato (arrotondamento verticale)
+    // 3. Layer Shape Modeling (vertical rounding)
     float layerShape = sin(uLayerFraction * 3.14159); 
     float clouds = smoothstep(0.55 - (layerShape * 0.25), 0.75 - (layerShape * 0.15), n);
 
-    // 4. Dissolvenza verso l'orizzonte (basata sulla distanza dalla telecamera)
+    // 4. Horizon Fade (based on distance from camera)
     float dist = length(WorldPos.xz - viewPos.xz);
     float fade = 1.0 - smoothstep(400.0, 1000.0, dist);
     clouds *= fade;
 
-    // 5. Ombreggiatura e Colore
-    // Assicuriamo un minimo di illuminazione notturna per non far sparire le nuvole nel buio
+    // 5. Shading and Color
+    // Ensure a minimum of night lighting so clouds don't disappear in the dark
     vec3 lightIntensity = max(lightColor, vec3(0.15)); 
-    // Mix tra il colore del cielo (ombra) e il bianco (luce) in base all'altezza dello strato
+    // Mix between sky color (shadow) and white (light) based on layer height
     vec3 cloudBaseColor = mix(skyColor * 0.8, vec3(1.0), uLayerFraction * 0.6 + 0.4);
     
     float alpha = clouds * 0.6 * layerShape;
 
-    // Se la densità è trascurabile, scarta il frammento per ottimizzare il rendering
+    // If density is negligible, discard the fragment to optimize rendering
     if(alpha < 0.01) discard;
 
     FragColor = vec4(cloudBaseColor * lightIntensity, alpha);

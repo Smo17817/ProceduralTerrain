@@ -32,7 +32,7 @@ void main()
     float diff = max(dot(norm, -lightDir), 0.0);
     vec3 diffuse = diff * lightColor;
 
-    // Specular forte
+    // Strong specular
     vec3 reflectDir = reflect(lightDir, norm);
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), 128.0);
     vec3 specular = spec * lightColor * 1.2;
@@ -40,7 +40,7 @@ void main()
     // Fresnel
     float fresnel = pow(1.0 - max(dot(viewDir, norm), 0.0), 3.0);
 
-    // Colore acqua
+    // Water color
     vec3 deepWater = vec3(0.0, 0.15, 0.35);
     vec3 shallowWater = vec3(0.0, 0.4, 0.6);
 
@@ -52,25 +52,25 @@ void main()
 
     // FOAM LOGIC
 
-    // Creste (normale meno verticale)
+    // Crests (normal less vertical)
     float crestFactor = 1.0 - norm.y;
 
-    // Altezza onda
+    // Wave height
     float heightFactorFoam = smoothstep(0.2, 0.6, WaveHeight - waterLevel);
 
-    // Rumore animato
+    // Animated noise
     float foamNoise = noise(FragPos.xz * 0.15 + uTime * 0.3);
 
     float foam = crestFactor * heightFactorFoam * foamNoise;
 
     foam = smoothstep(0.2, 0.6, foam);
 
-    // Colore spuma
+    // Foam color
     vec3 foamColor = vec3(1.0);
 
     finalColor = mix(finalColor, foamColor, foam * 0.8);
 
-    // Alpha dinamico
+    // Dynamic alpha
     float alpha = 0.65 + fresnel * 0.3;
 
     // FOG

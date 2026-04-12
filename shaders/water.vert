@@ -14,7 +14,7 @@ out float WaveHeight;
 
 const float PI = 3.14159265;
 
-// Parametri onde
+// Wave parameters
 vec3 gerstnerWave(vec3 pos, vec2 dir, float steepness, float wavelength, float speed)
 {
     float k = 2.0 * PI / wavelength;

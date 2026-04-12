@@ -3,5 +3,5 @@ out vec4 FragColor;
 uniform vec3 sunColor;
 
 void main() {
-    FragColor = vec4(sunColor, 1.0); // Colore puro brillante
+    FragColor = vec4(sunColor, 1.0); // Pure bright sun color, no shading for simplicity
 }
