@@ -76,45 +76,45 @@ CMakeFiles/ProceduralTerrain.dir/src/main.cpp.obj: CMakeFiles/ProceduralTerrain.
 CMakeFiles/ProceduralTerrain.dir/src/main.cpp.obj: C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/src/main.cpp
 CMakeFiles/ProceduralTerrain.dir/src/main.cpp.obj: CMakeFiles/ProceduralTerrain.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProceduralTerrain.dir/src/main.cpp.obj"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrain.dir/src/main.cpp.obj -MF CMakeFiles\ProceduralTerrain.dir\src\main.cpp.obj.d -o CMakeFiles\ProceduralTerrain.dir\src\main.cpp.obj -c "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\main.cpp"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrain.dir/src/main.cpp.obj -MF CMakeFiles\ProceduralTerrain.dir\src\main.cpp.obj.d -o CMakeFiles\ProceduralTerrain.dir\src\main.cpp.obj -c "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\main.cpp"
 
 CMakeFiles/ProceduralTerrain.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProceduralTerrain.dir/src/main.cpp.i"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\main.cpp" > CMakeFiles\ProceduralTerrain.dir\src\main.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\main.cpp" > CMakeFiles\ProceduralTerrain.dir\src\main.cpp.i
 
 CMakeFiles/ProceduralTerrain.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProceduralTerrain.dir/src/main.cpp.s"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\main.cpp" -o CMakeFiles\ProceduralTerrain.dir\src\main.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\main.cpp" -o CMakeFiles\ProceduralTerrain.dir\src\main.cpp.s
 
 CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.obj: CMakeFiles/ProceduralTerrain.dir/flags.make
 CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.obj: CMakeFiles/ProceduralTerrain.dir/includes_CXX.rsp
 CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.obj: C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/src/Shader.cpp
 CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.obj: CMakeFiles/ProceduralTerrain.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.obj"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.obj -MF CMakeFiles\ProceduralTerrain.dir\src\Shader.cpp.obj.d -o CMakeFiles\ProceduralTerrain.dir\src\Shader.cpp.obj -c "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Shader.cpp"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.obj -MF CMakeFiles\ProceduralTerrain.dir\src\Shader.cpp.obj.d -o CMakeFiles\ProceduralTerrain.dir\src\Shader.cpp.obj -c "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Shader.cpp"
 
 CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.i"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Shader.cpp" > CMakeFiles\ProceduralTerrain.dir\src\Shader.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Shader.cpp" > CMakeFiles\ProceduralTerrain.dir\src\Shader.cpp.i
 
 CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.s"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Shader.cpp" -o CMakeFiles\ProceduralTerrain.dir\src\Shader.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Shader.cpp" -o CMakeFiles\ProceduralTerrain.dir\src\Shader.cpp.s
 
 CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.obj: CMakeFiles/ProceduralTerrain.dir/flags.make
 CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.obj: CMakeFiles/ProceduralTerrain.dir/includes_CXX.rsp
 CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.obj: C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/src/Terrain.cpp
 CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.obj: CMakeFiles/ProceduralTerrain.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.obj"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.obj -MF CMakeFiles\ProceduralTerrain.dir\src\Terrain.cpp.obj.d -o CMakeFiles\ProceduralTerrain.dir\src\Terrain.cpp.obj -c "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Terrain.cpp"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.obj -MF CMakeFiles\ProceduralTerrain.dir\src\Terrain.cpp.obj.d -o CMakeFiles\ProceduralTerrain.dir\src\Terrain.cpp.obj -c "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Terrain.cpp"
 
 CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.i"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Terrain.cpp" > CMakeFiles\ProceduralTerrain.dir\src\Terrain.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Terrain.cpp" > CMakeFiles\ProceduralTerrain.dir\src\Terrain.cpp.i
 
 CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.s"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Terrain.cpp" -o CMakeFiles\ProceduralTerrain.dir\src\Terrain.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\simon\OneDrive\Desktop\Universita\Informatica\Magistrale\Anno_2\Erasmus\Esami\Graphics&Visualization\ProceduralTerrain\src\Terrain.cpp" -o CMakeFiles\ProceduralTerrain.dir\src\Terrain.cpp.s
 
 CMakeFiles/ProceduralTerrain.dir/include/glad/glad.c.obj: CMakeFiles/ProceduralTerrain.dir/flags.make
 CMakeFiles/ProceduralTerrain.dir/include/glad/glad.c.obj: CMakeFiles/ProceduralTerrain.dir/includes_C.rsp

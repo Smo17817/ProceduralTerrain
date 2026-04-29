@@ -7,14 +7,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "OpenGL::GL::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-OpenGL__GL-66d77a8971c31968569f.json",
+					"jsonFile" : "target-OpenGL__GL-Debug-66d77a8971c31968569f.json",
 					"name" : "OpenGL::GL",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "OpenGL::GLU::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-OpenGL__GLU-f7a26941b6289ac59738.json",
+					"jsonFile" : "target-OpenGL__GLU-Debug-f7a26941b6289ac59738.json",
 					"name" : "OpenGL::GLU",
 					"projectIndex" : 0
 				}
@@ -28,7 +28,7 @@
 						1
 					],
 					"build" : ".",
-					"jsonFile" : "directory-.-f6f22219c74102c3da70.json",
+					"jsonFile" : "directory-.-Debug-f6f22219c74102c3da70.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -41,7 +41,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -66,7 +66,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ProceduralTerrain::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ProceduralTerrain-e044191adc95a2e97f3b.json",
+					"jsonFile" : "target-ProceduralTerrain-Debug-0a9baf92b8bd72fee197.json",
 					"name" : "ProceduralTerrain",
 					"projectIndex" : 0
 				}

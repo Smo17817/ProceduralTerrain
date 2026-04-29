@@ -27,13 +27,11 @@ events:
     names:
       - "mingw32-make.exe"
     candidate_directories:
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
-      - "C:/mingw64/bin/"
       - "C:/Program Files/Microsoft MPI/Bin/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -72,64 +70,53 @@ events:
       - "/MinGW/bin/"
       - "/REGISTRY-NOTFOUND/MinGW/bin/"
     searched_directories:
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/mingw32-make.exe.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/mingw32-make.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mingw32-make.exe.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/mingw32-make.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mingw32-make.exe.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/mingw32-make.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/mingw32-make.exe.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/mingw32-make.exe"
-      - "C:/Python314/Scripts/mingw32-make.exe.com"
-      - "C:/Python314/Scripts/mingw32-make.exe"
-      - "C:/Python314/mingw32-make.exe.com"
-      - "C:/Python314/mingw32-make.exe"
       - "C:/mingw64/bin/mingw32-make.exe.com"
     found: "C:/mingw64/bin/mingw32-make.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -148,21 +135,13 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "cc"
-      - "gcc"
-      - "cl"
-      - "bcc"
-      - "xlc"
-      - "icx"
-      - "clang"
+      - "C:/mingw64/bin/gcc.exe"
     candidate_directories:
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
-      - "C:/mingw64/bin/"
       - "C:/Program Files/Microsoft MPI/Bin/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -197,181 +176,53 @@ events:
       - "C:/Program Files/JetBrains/PyCharm Community Edition 2024.3.4/bin/"
       - "C:/Users/simon/AppData/Roaming/npm/"
     searched_directories:
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/cc.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/cc.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/cc"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/cl.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/cl.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/cl"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/bcc.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/bcc.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/bcc"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/xlc.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/xlc.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/xlc"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/icx.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/icx.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/icx"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/clang.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/clang.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/clang"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cc"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/xlc"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cc"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/xlc"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/cc.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/cc.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/cc"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/cl.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/cl.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/cl"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bcc.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bcc.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bcc"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/xlc.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/xlc.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/xlc"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/icx.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/icx.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/icx"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/clang.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/clang.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/clang"
-      - "C:/Python314/Scripts/cc.com"
-      - "C:/Python314/Scripts/cc.exe"
-      - "C:/Python314/Scripts/cc"
-      - "C:/Python314/Scripts/gcc.com"
-      - "C:/Python314/Scripts/gcc.exe"
-      - "C:/Python314/Scripts/gcc"
-      - "C:/Python314/Scripts/cl.com"
-      - "C:/Python314/Scripts/cl.exe"
-      - "C:/Python314/Scripts/cl"
-      - "C:/Python314/Scripts/bcc.com"
-      - "C:/Python314/Scripts/bcc.exe"
-      - "C:/Python314/Scripts/bcc"
-      - "C:/Python314/Scripts/xlc.com"
-      - "C:/Python314/Scripts/xlc.exe"
-      - "C:/Python314/Scripts/xlc"
-      - "C:/Python314/Scripts/icx.com"
-      - "C:/Python314/Scripts/icx.exe"
-      - "C:/Python314/Scripts/icx"
-      - "C:/Python314/Scripts/clang.com"
-      - "C:/Python314/Scripts/clang.exe"
-      - "C:/Python314/Scripts/clang"
-      - "C:/Python314/cc.com"
-      - "C:/Python314/cc.exe"
-      - "C:/Python314/cc"
-      - "C:/Python314/gcc.com"
-      - "C:/Python314/gcc.exe"
-      - "C:/Python314/gcc"
-      - "C:/Python314/cl.com"
-      - "C:/Python314/cl.exe"
-      - "C:/Python314/cl"
-      - "C:/Python314/bcc.com"
-      - "C:/Python314/bcc.exe"
-      - "C:/Python314/bcc"
-      - "C:/Python314/xlc.com"
-      - "C:/Python314/xlc.exe"
-      - "C:/Python314/xlc"
-      - "C:/Python314/icx.com"
-      - "C:/Python314/icx.exe"
-      - "C:/Python314/icx"
-      - "C:/Python314/clang.com"
-      - "C:/Python314/clang.exe"
-      - "C:/Python314/clang"
-      - "C:/mingw64/bin/cc.com"
-      - "C:/mingw64/bin/cc.exe"
-      - "C:/mingw64/bin/cc"
-      - "C:/mingw64/bin/gcc.com"
+      - "C:/mingw64/bin/gcc.exe.com"
     found: "C:/mingw64/bin/gcc.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -399,48 +250,49 @@ events:
     found: "C:/mingw64/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "message-v1"
     backtrace:
@@ -484,9 +336,7 @@ events:
       - "ar"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -528,48 +378,49 @@ events:
     found: "C:/mingw64/bin/ar.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -591,9 +442,7 @@ events:
       - "ranlib"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -635,48 +484,49 @@ events:
     found: "C:/mingw64/bin/ranlib.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -698,9 +548,7 @@ events:
       - "strip"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -742,48 +590,49 @@ events:
     found: "C:/mingw64/bin/strip.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -805,9 +654,7 @@ events:
       - "ld"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -849,48 +696,49 @@ events:
     found: "C:/mingw64/bin/ld.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -912,9 +760,7 @@ events:
       - "nm"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -956,48 +802,49 @@ events:
     found: "C:/mingw64/bin/nm.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -1019,9 +866,7 @@ events:
       - "objdump"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -1063,48 +908,49 @@ events:
     found: "C:/mingw64/bin/objdump.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -1126,9 +972,7 @@ events:
       - "objcopy"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -1170,48 +1014,49 @@ events:
     found: "C:/mingw64/bin/objcopy.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -1233,9 +1078,7 @@ events:
       - "readelf"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -1277,48 +1120,49 @@ events:
     found: "C:/mingw64/bin/readelf.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -1340,9 +1184,7 @@ events:
       - "dlltool"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -1384,48 +1226,49 @@ events:
     found: "C:/mingw64/bin/dlltool.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -1447,9 +1290,7 @@ events:
       - "addr2line"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -1491,48 +1332,49 @@ events:
     found: "C:/mingw64/bin/addr2line.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -1554,9 +1396,7 @@ events:
       - "tapi"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -1597,15 +1437,9 @@ events:
       - "C:/mingw64/bin/tapi.com"
       - "C:/mingw64/bin/tapi.exe"
       - "C:/mingw64/bin/tapi"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/tapi.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/tapi.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/tapi"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
+      - "C:/usr/bin/tapi.com"
+      - "C:/usr/bin/tapi.exe"
+      - "C:/usr/bin/tapi"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/tapi.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/tapi.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/tapi"
@@ -1717,48 +1551,49 @@ events:
     found: false
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -1783,9 +1618,7 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -1826,15 +1659,9 @@ events:
       - "C:/mingw64/bin/gcc-ar-15.2.com"
       - "C:/mingw64/bin/gcc-ar-15.2.exe"
       - "C:/mingw64/bin/gcc-ar-15.2"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.2.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.2.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.2"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
+      - "C:/usr/bin/gcc-ar-15.2.com"
+      - "C:/usr/bin/gcc-ar-15.2.exe"
+      - "C:/usr/bin/gcc-ar-15.2"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2"
@@ -1946,15 +1773,9 @@ events:
       - "C:/mingw64/bin/gcc-ar-15.com"
       - "C:/mingw64/bin/gcc-ar-15.exe"
       - "C:/mingw64/bin/gcc-ar-15"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15"
+      - "C:/usr/bin/gcc-ar-15.com"
+      - "C:/usr/bin/gcc-ar-15.exe"
+      - "C:/usr/bin/gcc-ar-15"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15"
@@ -2066,15 +1887,9 @@ events:
       - "C:/mingw64/bin/gcc-ar15.com"
       - "C:/mingw64/bin/gcc-ar15.exe"
       - "C:/mingw64/bin/gcc-ar15"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar15.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar15.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15"
+      - "C:/usr/bin/gcc-ar15.com"
+      - "C:/usr/bin/gcc-ar15.exe"
+      - "C:/usr/bin/gcc-ar15"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar15.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar15.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar15"
@@ -2187,48 +2002,49 @@ events:
     found: "C:/mingw64/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -2253,9 +2069,7 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -2296,15 +2110,9 @@ events:
       - "C:/mingw64/bin/gcc-ranlib-15.2.com"
       - "C:/mingw64/bin/gcc-ranlib-15.2.exe"
       - "C:/mingw64/bin/gcc-ranlib-15.2"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.2.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.2.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.2"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
+      - "C:/usr/bin/gcc-ranlib-15.2.com"
+      - "C:/usr/bin/gcc-ranlib-15.2.exe"
+      - "C:/usr/bin/gcc-ranlib-15.2"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2"
@@ -2416,15 +2224,9 @@ events:
       - "C:/mingw64/bin/gcc-ranlib-15.com"
       - "C:/mingw64/bin/gcc-ranlib-15.exe"
       - "C:/mingw64/bin/gcc-ranlib-15"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15"
+      - "C:/usr/bin/gcc-ranlib-15.com"
+      - "C:/usr/bin/gcc-ranlib-15.exe"
+      - "C:/usr/bin/gcc-ranlib-15"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15"
@@ -2536,15 +2338,9 @@ events:
       - "C:/mingw64/bin/gcc-ranlib15.com"
       - "C:/mingw64/bin/gcc-ranlib15.exe"
       - "C:/mingw64/bin/gcc-ranlib15"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib15.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib15.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15"
+      - "C:/usr/bin/gcc-ranlib15.com"
+      - "C:/usr/bin/gcc-ranlib15.exe"
+      - "C:/usr/bin/gcc-ranlib15"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15"
@@ -2657,121 +2453,49 @@ events:
     found: "C:/mingw64/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
-        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
-        - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
-        - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
-        - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
-        - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
-        - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
-        - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
-        - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
-        - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
-        - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
-        - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/mingw64/share/cmake-4.2/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
-      - "C:/mingw64/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
-      - "CMakeLists.txt:2 (project)"
-    mode: "program"
-    variable: "CMAKE_CXX_COMPILER"
-    description: "CXX compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "c++"
-      - "g++"
-      - "cl"
-      - "bcc"
-      - "icx"
-      - "clang++"
-    candidate_directories:
-      - "C:/mingw64/bin/"
-    searched_directories:
-      - "C:/mingw64/bin/c++.com"
-    found: "C:/mingw64/bin/c++.exe"
-    search_context:
-      ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -2799,48 +2523,49 @@ events:
     found: "C:/mingw64/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "message-v1"
     backtrace:
@@ -2850,7 +2575,7 @@ events:
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/mingw64/bin/c++.exe 
+      Compiler: C:/mingw64/bin/g++.exe 
       Build flags: 
       Id flags:  
       
@@ -2887,9 +2612,7 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -2930,15 +2653,9 @@ events:
       - "C:/mingw64/bin/gcc-ar-15.2.com"
       - "C:/mingw64/bin/gcc-ar-15.2.exe"
       - "C:/mingw64/bin/gcc-ar-15.2"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.2.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.2.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.2"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.2"
+      - "C:/usr/bin/gcc-ar-15.2.com"
+      - "C:/usr/bin/gcc-ar-15.2.exe"
+      - "C:/usr/bin/gcc-ar-15.2"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.2"
@@ -3050,15 +2767,9 @@ events:
       - "C:/mingw64/bin/gcc-ar-15.com"
       - "C:/mingw64/bin/gcc-ar-15.exe"
       - "C:/mingw64/bin/gcc-ar-15"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar-15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-15"
+      - "C:/usr/bin/gcc-ar-15.com"
+      - "C:/usr/bin/gcc-ar-15.exe"
+      - "C:/usr/bin/gcc-ar-15"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar-15"
@@ -3170,15 +2881,9 @@ events:
       - "C:/mingw64/bin/gcc-ar15.com"
       - "C:/mingw64/bin/gcc-ar15.exe"
       - "C:/mingw64/bin/gcc-ar15"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar15.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar15.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ar15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar15"
+      - "C:/usr/bin/gcc-ar15.com"
+      - "C:/usr/bin/gcc-ar15.exe"
+      - "C:/usr/bin/gcc-ar15"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar15.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar15.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ar15"
@@ -3291,48 +2996,49 @@ events:
     found: "C:/mingw64/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -3357,9 +3063,7 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "C:/mingw64/bin/"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
@@ -3400,15 +3104,9 @@ events:
       - "C:/mingw64/bin/gcc-ranlib-15.2.com"
       - "C:/mingw64/bin/gcc-ranlib-15.2.exe"
       - "C:/mingw64/bin/gcc-ranlib-15.2"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.2.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.2.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.2"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.2"
+      - "C:/usr/bin/gcc-ranlib-15.2.com"
+      - "C:/usr/bin/gcc-ranlib-15.2.exe"
+      - "C:/usr/bin/gcc-ranlib-15.2"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.2"
@@ -3520,15 +3218,9 @@ events:
       - "C:/mingw64/bin/gcc-ranlib-15.com"
       - "C:/mingw64/bin/gcc-ranlib-15.exe"
       - "C:/mingw64/bin/gcc-ranlib-15"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib-15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-15"
+      - "C:/usr/bin/gcc-ranlib-15.com"
+      - "C:/usr/bin/gcc-ranlib-15.exe"
+      - "C:/usr/bin/gcc-ranlib-15"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib-15"
@@ -3640,15 +3332,9 @@ events:
       - "C:/mingw64/bin/gcc-ranlib15.com"
       - "C:/mingw64/bin/gcc-ranlib15.exe"
       - "C:/mingw64/bin/gcc-ranlib15"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib15.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib15.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/gcc-ranlib15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib15"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib15"
+      - "C:/usr/bin/gcc-ranlib15.com"
+      - "C:/usr/bin/gcc-ranlib15.exe"
+      - "C:/usr/bin/gcc-ranlib15"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15.com"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15.exe"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/gcc-ranlib15"
@@ -3761,48 +3447,49 @@ events:
     found: "C:/mingw64/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
   -
     kind: "find-v1"
     backtrace:
@@ -3823,16 +3510,13 @@ events:
       CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
       CMAKE_FIND_USE_INSTALL_PREFIX: true
     names:
-      - "windres"
-      - "windres"
+      - "C:/mingw64/bin/windres.exe"
     candidate_directories:
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/mingw64/bin/"
+      - "C:/usr/bin/"
       - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/"
       - "C:/Python314/Scripts/"
       - "C:/Python314/"
-      - "C:/mingw64/bin/"
       - "C:/Program Files/Microsoft MPI/Bin/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
@@ -3866,6 +3550,9 @@ events:
       - "C:/Users/simon/AppData/Local/GitHubDesktop/bin/"
       - "C:/Program Files/JetBrains/PyCharm Community Edition 2024.3.4/bin/"
       - "C:/Users/simon/AppData/Roaming/npm/"
+      - "/mingw64/bin/"
+      - "/mingw64/sbin/"
+      - "/mingw64/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -3879,72 +3566,56 @@ events:
       - "C:/Program Files (x86)/ProceduralTerrain/sbin/"
       - "C:/Program Files (x86)/ProceduralTerrain/"
     searched_directories:
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/windres.com"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/windres.exe"
-      - "C:/Program Files/WindowsApps/Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe/windres"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres.com"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres.exe"
-      - "C:/Users/simon/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/windres.com"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/windres.exe"
-      - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/windres"
-      - "C:/Python314/Scripts/windres.com"
-      - "C:/Python314/Scripts/windres.exe"
-      - "C:/Python314/Scripts/windres"
-      - "C:/Python314/windres.com"
-      - "C:/Python314/windres.exe"
-      - "C:/Python314/windres"
-      - "C:/mingw64/bin/windres.com"
+      - "C:/mingw64/bin/windres.exe.com"
     found: "C:/mingw64/bin/windres.exe"
     search_context:
       ENV{PATH}:
-        - "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.6.0.0_x64__8wekyb3d8bbwe"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\simon\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code"
-        - "C:\\Python314\\Scripts\\"
-        - "C:\\Python314\\"
         - "C:\\mingw64\\bin"
-        - "C:\\Program Files\\Microsoft MPI\\Bin\\"
+        - "C:\\mingw64\\bin"
+        - "C:\\mingw64\\bin"
+        - "C:\\usr\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code"
+        - "C:\\Python314\\Scripts\\"
+        - "C:/Python314/"
+        - "C:\\mingw64\\bin"
+        - "C:/Program Files/Microsoft MPI/Bin/"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
-        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath"
         - "C:\\ProgramData\\Oracle\\Java\\javapath"
-        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:/Program Files/Common Files/Oracle/Java/javapath"
         - "C:\\WINDOWS\\system32"
-        - "C:\\WINDOWS"
+        - "C:/WINDOWS"
         - "C:\\WINDOWS\\System32\\Wbem"
-        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/WindowsPowerShell/v1.0/"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\JDK\\bin"
-        - "C:\\Program Files\\Java\\jdk1.8.0_201\\bin"
+        - "C:/Program Files/Java/jdk1.8.0_201/bin"
         - "C:\\Program Files\\Git\\cmd"
-        - "C:\\Programmazione\\flutter\\bin"
+        - "C:/Programmazione/flutter/bin"
         - "C:\\Program Files\\dotnet\\"
-        - "C:\\Program Files\\nodejs\\"
+        - "C:/Program Files/nodejs/"
         - "C:\\ProgramData\\chocolatey\\bin"
-        - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:/Program Files/Docker/Docker/resources/bin"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Python312\\"
+        - "C:/Users/simon/AppData/Local/Programs/Python/Python312/"
         - "C:\\Users\\simon\\AppData\\Local\\Programs\\Python\\Launcher\\"
-        - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
+        - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
         - "C:\\Users\\simon\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\simon\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:/Users/simon/AppData/Local/Programs/Microsoft VS Code/bin"
         - "C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2022.2.3\\bin"
-        - "C:\\Program Files\\Java\\jdk-19\\bin"
+        - "C:/Program Files/Java/jdk-19/bin"
         - "C:\\Program Files\\Java\\apache-maven-3.8.6\\bin"
-        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.3\\bin"
+        - "C:/Program Files/JetBrains/IntelliJ IDEA 2022.3/bin"
         - "C:\\Programmazione\\flutter\\bin"
-        - "C:\\Program Files\\mingw64\\bin"
+        - "C:/Program Files/mingw64/bin"
         - "C:\\Users\\simon\\.dotnet\\tools"
-        - "C:\\Users\\simon\\AppData\\Local\\GitHubDesktop\\bin"
+        - "C:/Users/simon/AppData/Local/GitHubDesktop/bin"
         - "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.3.4\\bin"
-        - "C:\\Users\\simon\\AppData\\Roaming\\npm"
+        - "C:/Users/simon/AppData/Roaming/npm"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ProceduralTerrain"
       CMAKE_SYSTEM_PREFIX_PATH:
+        - "/mingw64"
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/mingw64"
@@ -3958,8 +3629,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-1jcbce"
-      binary: "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-1jcbce"
+      source: "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-s3zxdb"
+      binary: "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-s3zxdb"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -3968,13 +3639,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-1jcbce'
+        Change Dir: 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-s3zxdb'
         
-        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_f0a82/fast
-        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_f0a82.dir\\build.make CMakeFiles/cmTC_f0a82.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-1jcbce'
-        Building C object CMakeFiles/cmTC_f0a82.dir/CMakeCCompilerABI.c.obj
-        C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c
+        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_8a167/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8a167.dir\\build.make CMakeFiles/cmTC_8a167.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-s3zxdb'
+        Building C object CMakeFiles/cmTC_8a167.dir/CMakeCCompilerABI.c.obj
+        C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
@@ -3983,8 +3654,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r5) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_f0a82.dir\\'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_f0a82.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\simon\\AppData\\Local\\Temp\\ccICAAPl.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_8a167.dir\\'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_8a167.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\simon\\AppData\\Local\\Temp\\ccb8aqHC.s
         GNU C23 (MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r5) version 15.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -4003,14 +3674,14 @@ events:
          C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 89aad7dea6bb50640fccc15cba03060f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_f0a82.dir\\'
-         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj C:\\Users\\simon\\AppData\\Local\\Temp\\ccICAAPl.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_8a167.dir\\'
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj C:\\Users\\simon\\AppData\\Local\\Temp\\ccb8aqHC.s
         GNU assembler version 2.45.1 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r5) 2.45.1
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_f0a82.exe
-        C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_f0a82.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_8a167.exe
+        C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_8a167.dir\\link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe
@@ -4022,16 +3693,16 @@ events:
         gcc version 15.2.0 (MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r5) 
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0a82.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f0a82.'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccOhFbec.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_f0a82.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_f0a82.dir/objects.a --no-whole-archive --out-implib libcmTC_f0a82.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8a167.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8a167.'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccfyCV7S.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8a167.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_8a167.dir/objects.a --no-whole-archive --out-implib libcmTC_8a167.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         collect2 version 15.2.0
-        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccOhFbec.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_f0a82.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_f0a82.dir/objects.a --no-whole-archive --out-implib libcmTC_f0a82.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccfyCV7S.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8a167.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_8a167.dir/objects.a --no-whole-archive --out-implib libcmTC_8a167.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r5) 2.45.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0a82.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f0a82.'
-        C:\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_f0a82.dir/objects.a
-        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_f0a82.dir/objects.a @CMakeFiles\\cmTC_f0a82.dir\\objects1.rsp
-        C:\\mingw64\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_f0a82.dir/objects.a -Wl,--no-whole-archive -o cmTC_f0a82.exe -Wl,--out-implib,libcmTC_f0a82.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-1jcbce'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8a167.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8a167.'
+        C:\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_8a167.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_8a167.dir/objects.a @CMakeFiles\\cmTC_8a167.dir\\objects1.rsp
+        C:\\mingw64\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_8a167.dir/objects.a -Wl,--no-whole-archive -o cmTC_8a167.exe -Wl,--out-implib,libcmTC_8a167.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        mingw32-make[1]: Leaving directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-s3zxdb'
         
       exitCode: 0
   -
@@ -4066,13 +3737,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-1jcbce']
+        ignore line: [Change Dir: 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-s3zxdb']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_f0a82/fast]
-        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_f0a82.dir\\build.make CMakeFiles/cmTC_f0a82.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-1jcbce']
-        ignore line: [Building C object CMakeFiles/cmTC_f0a82.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_8a167/fast]
+        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8a167.dir\\build.make CMakeFiles/cmTC_8a167.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-s3zxdb']
+        ignore line: [Building C object CMakeFiles/cmTC_8a167.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\mingw64\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -4081,8 +3752,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (MinGW-W64 x86_64-msvcrt-posix-seh  built by Brecht Sanders  r5) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_f0a82.dir\\']
-        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_f0a82.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\simon\\AppData\\Local\\Temp\\ccICAAPl.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_8a167.dir\\']
+        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_8a167.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\\Users\\simon\\AppData\\Local\\Temp\\ccb8aqHC.s]
         ignore line: [GNU C23 (MinGW-W64 x86_64-msvcrt-posix-seh  built by Brecht Sanders  r5) version 15.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -4101,8 +3772,8 @@ events:
         ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 89aad7dea6bb50640fccc15cba03060f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_f0a82.dir\\']
-        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj C:\\Users\\simon\\AppData\\Local\\Temp\\ccICAAPl.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_8a167.dir\\']
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj C:\\Users\\simon\\AppData\\Local\\Temp\\ccb8aqHC.s]
         ignore line: [GNU assembler version 2.45.1 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r5) 2.45.1]
         ignore line: [COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/]
         ignore line: [C:/mingw64/bin/../libexec/gcc/]
@@ -4113,9 +3784,9 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_f0a82.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_f0a82.exe]
-        ignore line: [C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_f0a82.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_8a167.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_8a167.exe]
+        ignore line: [C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_8a167.dir\\link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe]
@@ -4134,13 +3805,13 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0a82.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_f0a82.']
-        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccOhFbec.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_f0a82.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_f0a82.dir/objects.a --no-whole-archive --out-implib libcmTC_f0a82.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8a167.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8a167.']
+        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccfyCV7S.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8a167.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_8a167.dir/objects.a --no-whole-archive --out-implib libcmTC_8a167.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccOhFbec.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccfyCV7S.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -4162,7 +3833,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_f0a82.exe] ==> ignore
+          arg [cmTC_8a167.exe] ==> ignore
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o]
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0]
@@ -4173,10 +3844,10 @@ events:
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../..] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_f0a82.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_8a167.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_f0a82.dll.a] ==> ignore
+          arg [libcmTC_8a167.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -4258,8 +3929,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-211icf"
-      binary: "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-211icf"
+      source: "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-ktiils"
+      binary: "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-ktiils"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -4269,23 +3940,23 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-211icf'
+        Change Dir: 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-ktiils'
         
-        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_dbdd8/fast
-        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_dbdd8.dir\\build.make CMakeFiles/cmTC_dbdd8.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-211icf'
-        Building CXX object CMakeFiles/cmTC_dbdd8.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\mingw64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_fbca8/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fbca8.dir\\build.make CMakeFiles/cmTC_fbca8.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-ktiils'
+        Building CXX object CMakeFiles/cmTC_fbca8.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\mingw64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp
         Using built-in specs.
-        COLLECT_GCC=C:\\mingw64\\bin\\c++.exe
+        COLLECT_GCC=C:\\mingw64\\bin\\g++.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
         Target: x86_64-w64-mingw32
         Configured with: ../configure --prefix=/R/winlibs_staging_msvcrt64/inst_gcc-15.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r5' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --enable-libgdiagnostics --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_msvcrt64/gcc-15.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_msvcrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_msvcrt/custombuilt64/share/binutils/bin/ld.exe
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r5) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dbdd8.dir\\'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_dbdd8.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\simon\\AppData\\Local\\Temp\\ccysHfYW.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_fbca8.dir\\'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_fbca8.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\simon\\AppData\\Local\\Temp\\cckeu1cA.s
         GNU C++17 (MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r5) version 15.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -4310,16 +3981,16 @@ events:
          C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 830a55a549e65e5f69642a9e9c0927ce
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dbdd8.dir\\'
-         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\simon\\AppData\\Local\\Temp\\ccysHfYW.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_fbca8.dir\\'
+         C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\simon\\AppData\\Local\\Temp\\cckeu1cA.s
         GNU assembler version 2.45.1 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r5) 2.45.1
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_dbdd8.exe
-        C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_dbdd8.dir\\link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_fbca8.exe
+        C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_fbca8.dir\\link.txt --verbose=1
         Using built-in specs.
-        COLLECT_GCC=C:\\mingw64\\bin\\c++.exe
+        COLLECT_GCC=C:\\mingw64\\bin\\g++.exe
         COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe
         OFFLOAD_TARGET_NAMES=nvptx-none
         Target: x86_64-w64-mingw32
@@ -4329,16 +4000,16 @@ events:
         gcc version 15.2.0 (MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r5) 
         COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../libexec/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/mingw64/bin/../lib/gcc/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbdd8.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbdd8.'
-         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccULHli9.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_dbdd8.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_dbdd8.dir/objects.a --no-whole-archive --out-implib libcmTC_dbdd8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fbca8.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fbca8.'
+         C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccylRnTW.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_fbca8.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fbca8.dir/objects.a --no-whole-archive --out-implib libcmTC_fbca8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         collect2 version 15.2.0
-        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccULHli9.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_dbdd8.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_dbdd8.dir/objects.a --no-whole-archive --out-implib libcmTC_dbdd8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccylRnTW.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_fbca8.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fbca8.dir/objects.a --no-whole-archive --out-implib libcmTC_fbca8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders, r5) 2.45.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbdd8.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbdd8.'
-        C:\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_dbdd8.dir/objects.a
-        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_dbdd8.dir/objects.a @CMakeFiles\\cmTC_dbdd8.dir\\objects1.rsp
-        C:\\mingw64\\bin\\c++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_dbdd8.dir/objects.a -Wl,--no-whole-archive -o cmTC_dbdd8.exe -Wl,--out-implib,libcmTC_dbdd8.dll.a -Wl,--major-image-version,0,--minor-image-version,0
-        mingw32-make[1]: Leaving directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-211icf'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fbca8.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fbca8.'
+        C:\\mingw64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_fbca8.dir/objects.a
+        C:\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_fbca8.dir/objects.a @CMakeFiles\\cmTC_fbca8.dir\\objects1.rsp
+        C:\\mingw64\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_fbca8.dir/objects.a -Wl,--no-whole-archive -o cmTC_fbca8.exe -Wl,--out-implib,libcmTC_fbca8.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        mingw32-make[1]: Leaving directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-ktiils'
         
       exitCode: 0
   -
@@ -4379,23 +4050,23 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-211icf']
+        ignore line: [Change Dir: 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-ktiils']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_dbdd8/fast]
-        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_dbdd8.dir\\build.make CMakeFiles/cmTC_dbdd8.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-211icf']
-        ignore line: [Building CXX object CMakeFiles/cmTC_dbdd8.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\mingw64\\bin\\c++.exe   -v -o CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_fbca8/fast]
+        ignore line: [C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fbca8.dir\\build.make CMakeFiles/cmTC_fbca8.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build/CMakeFiles/CMakeScratch/TryCompile-ktiils']
+        ignore line: [Building CXX object CMakeFiles/cmTC_fbca8.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\mingw64\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\c++.exe]
+        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\g++.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
         ignore line: [Target: x86_64-w64-mingw32]
         ignore line: [Configured with: ../configure --prefix=/R/winlibs_staging_msvcrt64/inst_gcc-15.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-msvcrt-posix-seh, built by Brecht Sanders, r5' --with-tune=generic --enable-checking=release --enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++ --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-mpfr=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-gmp=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --with-isl=/c/Prog/winlibs_staging_msvcrt/custombuilt64 --disable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --enable-libgdiagnostics --with-libiconv --with-system-zlib --with-build-sysroot=/R/winlibs_staging_msvcrt64/gcc-15.2.0/build_mingw/mingw-w64 CFLAGS='-I/c/Prog/winlibs_staging_msvcrt/custombuilt64/include/libdl-win32   -march=nocona -msahf -mtune=generic -O2 -Wno-error=format' CXXFLAGS='-Wno-int-conversion  -march=nocona -msahf -mtune=generic -O2' LDFLAGS='-pthread -Wl,--no-insert-timestamp -Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware' LD=/c/Prog/winlibs_staging_msvcrt/custombuilt64/share/binutils/bin/ld.exe]
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (MinGW-W64 x86_64-msvcrt-posix-seh  built by Brecht Sanders  r5) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dbdd8.dir\\']
-        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_dbdd8.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\simon\\AppData\\Local\\Temp\\ccysHfYW.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_fbca8.dir\\']
+        ignore line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:\\mingw64\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_fbca8.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\\Users\\simon\\AppData\\Local\\Temp\\cckeu1cA.s]
         ignore line: [GNU C++17 (MinGW-W64 x86_64-msvcrt-posix-seh  built by Brecht Sanders  r5) version 15.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -4420,8 +4091,8 @@ events:
         ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 830a55a549e65e5f69642a9e9c0927ce]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dbdd8.dir\\']
-        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\simon\\AppData\\Local\\Temp\\ccysHfYW.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_fbca8.dir\\']
+        ignore line: [ C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\simon\\AppData\\Local\\Temp\\cckeu1cA.s]
         ignore line: [GNU assembler version 2.45.1 (x86_64-w64-mingw32) using BFD version (Binutils for MinGW-W64 x86_64  built by Brecht Sanders  r5) 2.45.1]
         ignore line: [COMPILER_PATH=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/]
         ignore line: [C:/mingw64/bin/../libexec/gcc/]
@@ -4432,11 +4103,11 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_dbdd8.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_dbdd8.exe]
-        ignore line: [C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_dbdd8.dir\\link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\\cmTC_fbca8.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_fbca8.exe]
+        ignore line: [C:\\mingw64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_fbca8.dir\\link.txt --verbose=1]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\c++.exe]
+        ignore line: [COLLECT_GCC=C:\\mingw64\\bin\\g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -4453,13 +4124,13 @@ events:
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbdd8.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbdd8.']
-        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccULHli9.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_dbdd8.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_dbdd8.dir/objects.a --no-whole-archive --out-implib libcmTC_dbdd8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fbca8.exe' '-foffload-options=-l_GCC_stdc++' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_fbca8.']
+        link line: [ C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccylRnTW.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_fbca8.exe C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/mingw64/bin/../lib/gcc -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fbca8.dir/objects.a --no-whole-archive --out-implib libcmTC_fbca8.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccULHli9.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\simon\\AppData\\Local\\Temp\\ccylRnTW.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -4481,7 +4152,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_dbdd8.exe] ==> ignore
+          arg [cmTC_fbca8.exe] ==> ignore
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o] ==> obj [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o]
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0]
@@ -4492,10 +4163,10 @@ events:
           arg [-LC:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../..] ==> dir [C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_dbdd8.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_fbca8.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_dbdd8.dll.a] ==> ignore
+          arg [libcmTC_fbca8.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore

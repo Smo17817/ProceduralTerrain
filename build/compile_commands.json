@@ -1,0 +1,26 @@
+[
+{
+  "directory": "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/ProceduralTerrain.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\ProceduralTerrain.dir\\src\\main.cpp.obj -c \"C:\\Users\\simon\\OneDrive\\Desktop\\Universita\\Informatica\\Magistrale\\Anno_2\\Erasmus\\Esami\\Graphics&Visualization\\ProceduralTerrain\\src\\main.cpp\"",
+  "file": "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/src/main.cpp",
+  "output": "CMakeFiles/ProceduralTerrain.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/ProceduralTerrain.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\ProceduralTerrain.dir\\src\\Shader.cpp.obj -c \"C:\\Users\\simon\\OneDrive\\Desktop\\Universita\\Informatica\\Magistrale\\Anno_2\\Erasmus\\Esami\\Graphics&Visualization\\ProceduralTerrain\\src\\Shader.cpp\"",
+  "file": "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/src/Shader.cpp",
+  "output": "CMakeFiles/ProceduralTerrain.dir/src/Shader.cpp.obj"
+},
+{
+  "directory": "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/ProceduralTerrain.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\ProceduralTerrain.dir\\src\\Terrain.cpp.obj -c \"C:\\Users\\simon\\OneDrive\\Desktop\\Universita\\Informatica\\Magistrale\\Anno_2\\Erasmus\\Esami\\Graphics&Visualization\\ProceduralTerrain\\src\\Terrain.cpp\"",
+  "file": "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/src/Terrain.cpp",
+  "output": "CMakeFiles/ProceduralTerrain.dir/src/Terrain.cpp.obj"
+},
+{
+  "directory": "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe  @CMakeFiles/ProceduralTerrain.dir/includes_C.rsp -g -o CMakeFiles\\ProceduralTerrain.dir\\include\\glad\\glad.c.obj -c \"C:\\Users\\simon\\OneDrive\\Desktop\\Universita\\Informatica\\Magistrale\\Anno_2\\Erasmus\\Esami\\Graphics&Visualization\\ProceduralTerrain\\include\\glad\\glad.c\"",
+  "file": "C:/Users/simon/OneDrive/Desktop/Universita/Informatica/Magistrale/Anno_2/Erasmus/Esami/Graphics&Visualization/ProceduralTerrain/include/glad/glad.c",
+  "output": "CMakeFiles/ProceduralTerrain.dir/include/glad/glad.c.obj"
+}
+]

@@ -71,7 +71,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-std=gnu++17"
+					"fragment" : "-g -std=gnu++17"
 				}
 			],
 			"includes" : 
@@ -98,6 +98,12 @@
 			]
 		},
 		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
 			"includes" : 
 			[
 				{
@@ -117,6 +123,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"backtrace" : 2,
 				"fragment" : "-L\"C:\\Users\\simon\\OneDrive\\Desktop\\Universita\\Informatica\\Magistrale\\Anno_2\\Erasmus\\Esami\\Graphics&Visualization\\ProceduralTerrain\\lib\"",
